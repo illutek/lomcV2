@@ -1,0 +1,27 @@
+// //////////////////////////////
+// @@ NAVIGATION
+// //////////////////////////////
+
+.navigation {
+  background: $red;
+  padding: 1.5rem 1rem;
+  color: $white;
+  min-height: 5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 190;
+
+  @include respond(desktop) {
+    display: none;
+  }
+}
+
+.navigation-desktop {
+  display: none;
+
+  @include respond(desktop) {
+    display: block;
+  }
+}

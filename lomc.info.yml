@@ -1,0 +1,11 @@
+name: lomc
+type: theme
+description: 'Oude Limburgse Motoren Club'
+base theme: classy
+package: Custom
+core: 8.x
+version: 1.0.0
+
+libraries:
+  - lomc/globalstyle
+  - lomc/fonts

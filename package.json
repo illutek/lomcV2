@@ -9,14 +9,14 @@
   "author": "Stefan",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
     "gulp-prettyerror": "^1.2.1",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
-    "gulp-watch": "^5.0.1"
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0"
   },
   "dependencies": {}
 }

@@ -1,0 +1,70 @@
+// //////////////////////////////
+// @@ MENU BUTTON HAMBURGER
+// //////////////////////////////
+.hamburger {
+  
+  &__checkbox {
+    display: none;
+  }
+  &__button {
+    height: 4rem;
+    width: 4rem;
+    
+    text-align: center;
+    transition: all 1.2s;
+
+  }
+
+  &__checkbox:checked + &__button {
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    transform: rotate(135deg);
+    width: 3rem;
+    top: 0;
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    transform: rotate(-135deg);
+    width: 3rem;
+    top: 0;
+  }
+
+  &__icon {
+    position: relative;
+    transform: translateY(2.5rem);
+    width: 2rem;
+
+    &,
+    &::before,
+    &::after {
+      height: 2px;
+      background-color: $white;
+      display: inline-block;
+      transition: all 0.3s;
+    }
+
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+    &::before {
+      top: -0.6rem;
+      width:2rem;
+    }
+    &::after {
+      top: 0.6rem;
+      width: 2rem;
+    }
+  }
+
+}

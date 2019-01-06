@@ -25,6 +25,7 @@ const gulp = require('gulp'),
 const path = {
     dist: {
         twig: 'dist/templates/',
+        html: 'dist/templates/',
         yml: 'dist/',
         theme: 'dist',
         js: 'dist/js/',
@@ -35,6 +36,7 @@ const path = {
     },
     src: {
         twig: 'templates/**/*.twig',
+        html: 'templates/**/*.html',
         yml: '*.yml',
         theme: '*.theme',
         js: 'js/**/*.js',
@@ -45,6 +47,7 @@ const path = {
     },
     watch: {
         twig: 'templates/**/*.twig',
+        html: 'templates/**/*.html',
         yml: '*.yml',
         theme: '*.theme',
         js: 'js/**/*.js',
@@ -74,6 +77,10 @@ gulp.task('twig:dist', function () {
         .pipe(gulp.dest(path.dist.twig));
 });
 
+gulp.task('html:dist', function () {
+    gulp.src(path.src.html)
+        .pipe(gulp.dest(path.dist.html));
+});
 
 gulp.task('yml:dist', function () {
     gulp.src(path.src.yml)
@@ -108,7 +115,6 @@ gulp.task('style:dist', function () {
         }))
         .pipe(cleancss({compatibility: 'ie9'}))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('css'))
         .pipe(gulp.dest(path.dist.css));
 });
 
@@ -129,6 +135,7 @@ gulp.task('png:dist', function () {
 
 gulp.task('dist', [
     'twig:dist',
+    'html:dist',
     'yml:dist',
     'theme:dist',
     'js:dist',
@@ -147,6 +154,9 @@ gulp.task('dist', [
 gulp.task('watch', function(){
     watch([path.watch.twig], function(event, cb) {
         gulp.start('twig:dist');
+    });
+    watch([path.watch.html], function(event, cb) {
+        gulp.start('html:dist');
     });
     watch([path.watch.yml], function(event, cb) {
         gulp.start('yml:dist');
