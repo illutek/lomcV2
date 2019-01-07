@@ -2,6 +2,9 @@
 // @@ MENU BUTTON HAMBURGER
 // //////////////////////////////
 .hamburger {
+
+  display: flex;
+  justify-content: flex-end;
   
   &__checkbox {
     display: none;
@@ -9,9 +12,9 @@
   &__button {
     height: 4rem;
     width: 4rem;
-    
     text-align: center;
     transition: all 1.2s;
+    margin-top: -1.6rem;
 
   }
 
@@ -44,7 +47,7 @@
     &,
     &::before,
     &::after {
-      height: 2px;
+      height: 1px;
       background-color: $white;
       display: inline-block;
       transition: all 0.3s;
@@ -59,7 +62,7 @@
     }
     &::before {
       top: -0.6rem;
-      width:2rem;
+      width: 2rem;
     }
     &::after {
       top: 0.6rem;
