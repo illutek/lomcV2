@@ -1,0 +1,14 @@
+// /////////////////////////
+// @@ SIDEBAR
+// ////////////////////////
+
+.sidebar {
+  background: green;
+  display: none;
+
+  @include respond(desktop) {
+    display: block;
+
+    grid-area: sidebar;
+  }
+}  
