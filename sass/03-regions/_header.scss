@@ -4,7 +4,52 @@
 
 .header {
   background: gray;
-  padding-top: 4rem;
+  margin-top: 4rem;
+
+  @include respond(desktop) {
+    margin-top: 0;
+  }
 
   grid-area: header;
+
+  display: grid;
+  grid-template-columns: 2rem 1fr 3fr 2rem;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+
+  &-overlay {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    background: rgba($white, .5);
+    z-index: 2;
+
+  }
+
+  &-img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 1;
+    object-fit: cover;
+
+  }
+
+  &-logo {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    z-index: 3;
+    align-self: center;
+
+  }
+
+  &-title {
+    grid-column: 3 / 4;
+    grid-row: 1 / -1;
+    z-index: 3;
+    align-self: center;
+    font: {
+      size: 2rem;
+      weight: $font-weight-bold;
+    }
+
+  }
 }
