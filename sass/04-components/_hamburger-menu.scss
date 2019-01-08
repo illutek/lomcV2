@@ -2,13 +2,12 @@
 // @@ MENU BUTTON HAMBURGER
 // //////////////////////////////
 .hamburger {
+  text-decoration: none;
+  color: $white;
 
   display: flex;
   justify-content: flex-end;
-  
-  &__checkbox {
-    display: none;
-  }
+
   &__button {
     height: 4rem;
     width: 4rem;
@@ -39,7 +38,7 @@
     top: 0;
   }
 
-  &__icon {
+  &__icon--open {
     position: relative;
     transform: translateY(2.5rem);
     width: 2rem;
@@ -67,6 +66,30 @@
     &::after {
       top: 0.6rem;
       width: 2rem;
+    }
+  }
+
+  &__icon--close {
+    position: relative;
+    transform: translateY(2.5rem);
+    width: 2rem;
+
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+    &::before {
+      top: -0.6rem;
+      transform: rotate(135deg);
+    width: 3rem;
+    }
+    &::after {
+      top: 0.6rem;
+      transform: rotate(-135deg);
+      width: 3rem;
     }
   }
 

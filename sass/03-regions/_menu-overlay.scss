@@ -3,18 +3,12 @@
 // //////////////////////////////
 
 .menu-overlay {
-  height: 50vh;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  z-index: 175;
-  opacity: 0;
-  width: 0;
+  display:none;
+	position:fixed;
+	top:0;
+	height:100%;
+	width:100%;
+	overflow:auto;
+	z-index:99;
   background: $metallic-seaweed;
-  transition: all 0.8s;
-
-  &__checkbox:checked ~ &__top {
-    opacity: 1;
-    width: 100vw;
-    right: 0;
 }
