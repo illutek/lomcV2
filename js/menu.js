@@ -2,17 +2,31 @@
  * Created by stefan on 08-01-2019.
  *
  */
-(function ($) {
-  $(document).ready(function () {
-    $(".hamburger__button a").click(function () {
-      console.log("Hello world!");
-      $(".menu-overlay").fadeToggle(200);
-      $(this).toggleClass('hamburger__icon--open').toggleClass('hamburger__icon--close');
-    });
-  });
-  $('.menu-overlay').on('click', function () {
-    $(".menu-overlay").fadeToggle(200);
-    $(".hamburger a").toggleClass('hamburger__icon--open').toggleClass('hamburger__icon--close');
-    open = false;
-  });
-})(jQuery);
+
+(function () {
+  'use strict';
+
+  const openBtn = document.querySelector('.hamburger__button');
+  const closeBtn = document.querySelector('.close__button');
+  const menuOverlay = document.querySelector('.menu-overlay');
+  const navTop = document.querySelector('.navigation');
+
+  // console.log(closeBtn);
+
+  /** 
+   *  Functions
+  */
+
+  function closeMenu() {
+    menuOverlay.classList.remove('menu-overlay--visible');
+  }
+
+  function openMenu() {
+    menuOverlay.classList.toggle('menu-overlay--visible');
+  }
+
+  openBtn.addEventListener('click', openMenu);
+
+  closeBtn.addEventListener('click', closeMenu);
+
+})();

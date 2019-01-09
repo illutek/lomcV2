@@ -15,7 +15,8 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       sourcemaps = require('gulp-sourcemaps'),
       cleancss = require('gulp-clean-css'),
-      rimraf = require('rimraf')
+      rimraf = require('rimraf'),
+      babel = require('gulp-babel')
 
 
 /**
@@ -96,6 +97,9 @@ gulp.task('js:dist', function () {
     gulp.src(path.src.js)
         .pipe(prettyError())
         .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['es2015']
+        }))
         .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.dist.js));
