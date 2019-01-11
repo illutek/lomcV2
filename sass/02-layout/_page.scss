@@ -4,9 +4,18 @@
 
 .page {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(1rem, 2rem) 1fr minmax(1rem, 2rem);
   grid-template-rows: repeat(2, auto);
   grid-template-areas:
-    "header"
-    "content";
+    "header header header"
+    ". content .";
+
+  @include respond(desktop) {
+    grid-template-columns: minmax(2rem, 1fr) minmax(15rem, 82rem) 5fr minmax(2rem, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+      "header header header header"
+      "nav-desktop nav-desktop nav-desktop nav-desktop"
+      ". content sidebar .";
+  }
 }

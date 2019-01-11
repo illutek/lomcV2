@@ -12,9 +12,15 @@
 	z-index:99;
 	color: $white;
 	background: $metallic-seaweed;
+	transition: all .5s;
+
+	@include respond(desktop) {
+		display: none;
+	}
 	
 	display: grid;
 	grid-template-columns: 2rem 1fr 2rem;
+	grid-template-rows: 1fr 5fr;
 	grid-template-areas: 
 	  ". btn ."
 	  ". list .";
@@ -38,6 +44,7 @@
 .close {
 	&__button {
 		width: 5rem;
+		cursor: pointer;
 		
 		align-self: center;
 		justify-self: end;

@@ -9,7 +9,7 @@
   const openBtn = document.querySelector('.hamburger__button');
   const closeBtn = document.querySelector('.close__button');
   const menuOverlay = document.querySelector('.menu-overlay');
-  const navTop = document.querySelector('.navigation');
+  const navTopHidden = document.querySelector('.navigation');
 
   // console.log(closeBtn);
 
@@ -19,10 +19,12 @@
 
   function closeMenu() {
     menuOverlay.classList.remove('menu-overlay--visible');
+    navTopHidden.classList.remove('navigation--hidden');
   }
 
   function openMenu() {
     menuOverlay.classList.toggle('menu-overlay--visible');
+    navTopHidden.classList.add('navigation--hidden');
   }
 
   openBtn.addEventListener('click', openMenu);

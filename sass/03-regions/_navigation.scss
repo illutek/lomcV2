@@ -12,15 +12,50 @@
   left: 0;
   z-index: 190;
 
+  &--hidden {
+    display: none;
+  }
+
   @include respond(desktop) {
     display: none;
   }
-}
 
-.navigation-desktop {
-  display: none;
+  // Desktop Navigation
+  &-desktop {
+    display: none;
+    background: $red;
+    color: $white;
+    padding: 1rem 0;
+    grid-area: nav-desktop;
 
-  @include respond(desktop) {
-    display: block;
+    @include respond(desktop) {
+      display: block;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: minmax(2rem, 1fr) minmax(20rem, 87rem) minmax(2rem, 1fr);
+      grid-template-areas: 
+        ". nav-items .";
+
+    }
+
+    &__items {
+      list-style: none;
+      padding-left: 0;
+      grid-area: nav-items;
+      display: flex;
+
+    }
+
+    &__item {
+      
+
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $white;
+    }
   }
 }
