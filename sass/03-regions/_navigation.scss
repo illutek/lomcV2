@@ -32,24 +32,21 @@
       display: block;
     }
 
-    &__container {
-      display: grid;
-      grid-template-columns: minmax(2rem, 1fr) minmax(20rem, 87rem) minmax(2rem, 1fr);
-      grid-template-areas: 
-        ". nav-items .";
-
+    &__wrapper {
+      grid-area: wrapper;
     }
 
     &__items {
       list-style: none;
       padding-left: 0;
-      grid-area: nav-items;
       display: flex;
 
     }
 
     &__item {
-      
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
 
     }
 

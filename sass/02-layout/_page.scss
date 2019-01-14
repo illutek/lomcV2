@@ -4,18 +4,20 @@
 
 .page {
   display: grid;
-  grid-template-columns: minmax(1rem, 2rem) 1fr minmax(1rem, 2rem);
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
   grid-template-areas:
-    "header header header"
-    ". content .";
+    "header"
+    "main"
+    "footer";
 
-  @include respond(desktop) {
-    grid-template-columns: minmax(2rem, 1fr) minmax(15rem, 82rem) 5fr minmax(2rem, 1fr);
-    grid-template-rows: repeat(2, auto);
+  @include respond(tablet) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
     grid-template-areas: 
-      "header header header header"
-      "nav-desktop nav-desktop nav-desktop nav-desktop"
-      ". content sidebar .";
+      "header"
+      "nav-desktop"
+      "main"
+      "footer";
   }
 }

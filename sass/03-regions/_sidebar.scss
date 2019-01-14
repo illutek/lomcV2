@@ -3,12 +3,25 @@
 // ////////////////////////
 
 .sidebar {
-  background: green;
   display: none;
+  margin: 1rem 0;
 
   @include respond(desktop) {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
 
     grid-area: sidebar;
+  }
+
+  &__cta {}
+
+  &__photos {
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+
   }
 }  

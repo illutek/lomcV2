@@ -1,0 +1,14 @@
+// /////////////////////////
+// @@ BUTTONS 
+// ////////////////////////
+
+.btn {
+  color: $white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+
+  &--green {
+    background: $blue-green;
+
+  }
+}

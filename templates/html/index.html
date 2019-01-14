@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <!-- Navigation top for mobile view -->
   <div class="navigation">
     <div class="hamburger">
       <span>MENU</span>
@@ -20,6 +21,7 @@
     </div>
   </div>
 
+  <!-- menu overlay only for mobile view -->
   <div class="menu-overlay">
 
     <div class="close__button">
@@ -39,62 +41,106 @@
   </div>
 
   <div class="page">
-    <header class="header">
-      <div class="header-overlay"></div>
 
-      <div class="header-img">
+    <!-- header -->
+    <header class="header">
+      <div class="header__overlay"></div>
+
+      <!-- one image random -->
+      <div class="header__img">
         <img src="../../images/html-img/black-white01.jpg" alt="" />
       </div>
 
-      <div class="header-logo">
-        <img src="../../images/logo.jpg" alt="LOMC Logo" />
+      <!-- collection of images placed by grid random ordered -->
+      <div class="header__img--desktop">
+
       </div>
 
-      <div class="header-title">
-        <h1>Limburgse Oude Motoren Club</h1>
+      <div class="header__club-identification">
+        <div class="header__logo">
+          <img src="../../images/logo.jpg" alt="LOMC Logo" />
+        </div>
+
+        <div class="header__title">
+          <h1>Limburgse Oude Motoren Club</h1>
+        </div>
       </div>
+
+
+
     </header>
 
     <nav class="navigation-desktop">
-      <div class="navigation-desktop__container">
-        <ul class="navigation-desktop__items">
-          <li class="navigation-desktop__item">
-            <a class="navigation-desktop__link" href="#">Home</a>
-          </li>
-          <li class="navigation-desktop__item">
-            <a class="navigation-desktop__link" href="#">Contact</a>
-          </li>
-          <li class="navigation-desktop__item">
-            <a class="navigation-desktop__link" href="#">Linken</a>
-          </li>
-          <li class="navigation-desktop__item">
-            <a class="navigation-desktop__link" href="#">Foto's</a>
-          </li>
-          <li class="navigation-desktop__item">
-            <a class="navigation-desktop__link" href="#">Lid worden</a>
-          </li>
-        </ul>
+      <div class="grid__container">
+        <div class="navigation-desktop__wrapper">
+          <ul class="navigation-desktop__items">
+            <li class="navigation-desktop__item">
+              <a class="navigation-desktop__link" href="#">Home</a>
+            </li>
+            <li class="navigation-desktop__item">
+              <a class="navigation-desktop__link" href="#">Contact</a>
+            </li>
+            <li class="navigation-desktop__item">
+              <a class="navigation-desktop__link" href="#">Linken</a>
+            </li>
+            <li class="navigation-desktop__item">
+              <a class="navigation-desktop__link" href="#">Foto's</a>
+            </li>
+            <li class="navigation-desktop__item">
+              <a class="navigation-desktop__link" href="#">Lid worden</a>
+            </li>
+          </ul>
+        </div>
       </div>
-
     </nav>
 
-    <div class="content">
-      <h2>Voorstelling Limburgse Oude Motoren Club</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-        iaculis odio nibh, ac semper urna rhoncus feugiat. Aliquam non
-        euismod diam, facilisis finibus felis. Integer ultrices nisi
-        sollicitudin lacus dapibus rutrum. Sed aliquet ornare sapien a
-        cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-        a nulla ac nisl dapibus euismod vel in enim. Vivamus quis libero vel
-        tellus sagittis efficitur vel sit amet quam.
-      </p>
-    </div>
+    <main class="main">
+      <div class="grid__container">
+        <div class="main__wrapper">
+          <div class="main__content">
+            <h2>Voorstelling Limburgse Oude Motoren Club</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+              iaculis odio nibh, ac semper urna rhoncus feugiat. Aliquam non
+              euismod diam, facilisis finibus felis. Integer ultrices nisi
+              sollicitudin lacus dapibus rutrum. Sed aliquet ornare sapien a
+              cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              a nulla ac nisl dapibus euismod vel in enim. Vivamus quis libero vel
+              tellus sagittis efficitur vel sit amet quam.
+            </p>
+          </div>
 
-    <aside class="sidebar">Sidebar</aside>
+          <aside class="sidebar">
+            <div class="sidebar__cta">
+              <a href="#" class="btn btn--green">
+                Lid worden van onze club
+              </a>
+            </div>
+
+            <div class="sidebar__photos">
+              <img src="../../images/html-img/DSC02645.JPG" alt="">
+              <img src="../../images/html-img/DSCN5653.jpg" alt="">
+              <img src="../../images/html-img/DSCN5657.jpg" alt="">
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+    </main>
+
+
   </div>
+  <!-- end of page -->
+
   <footer class="footer">
-    <div class="container">Footer</div>
+    <div class="grid__container">
+
+      <div class="footer__wrapper">
+        Footer
+      </div>
+
+    </div>
   </footer>
 
   <script src="../../js/menu.js"></script>

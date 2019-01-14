@@ -1,0 +1,26 @@
+// //////////////////////////////
+// @@ MAIN
+// //////////////////////////////
+
+.main {
+  padding: 3rem 0 11rem;
+  grid-area: main;
+  
+  &__wrapper {
+    grid-area: wrapper;
+
+    @include respond(desktop) {
+      display: grid;
+      grid-template-columns: 4fr 2fr;
+      grid-gap: 2rem;
+      grid-template-areas: 
+        "content sidebar"
+    }
+  }
+
+  &__content {
+    grid-area: content;
+  }
+
+  
+}

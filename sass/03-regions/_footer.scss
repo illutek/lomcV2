@@ -10,4 +10,10 @@
   right: 0;
   color: $white;
   padding: 3rem 0;
+
+  grid-area: footer;
+
+  &__wrapper {
+    grid-area: wrapper;
+  }
 }
