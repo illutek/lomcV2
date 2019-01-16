@@ -1,5 +1,5 @@
 // /////////////////////////
-// @@ HEADER 
+// @@ HEADER
 // ////////////////////////
 
 .header {
@@ -7,13 +7,17 @@
   margin-top: 4rem;
 
   display: grid;
-  grid-template-columns: minmax(2rem, 1fr) minmax(55vw, 75vw)  minmax(2rem, 1fr);
+  grid-template-columns: minmax(2rem, 1fr) minmax(55vw, 75vw) minmax(2rem, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 1rem;
 
   @include respond(desktop) {
     margin-top: 0;
-    // grid-template-columns: minmax(2rem, 1fr) minmax(55vw, 75vw)  minmax(2rem, 1fr);
+    grid-template-columns: minmax(2rem, 1fr) minmax(45vw, 65vw) minmax(
+        2rem,
+        1fr
+      );
+    height: 50vh;
   }
 
   grid-area: header;
@@ -21,29 +25,40 @@
   &__overlay {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
-    background: rgba($white, .5);
+    background: rgba($white, 0.5);
     z-index: 2;
 
     @include respond(tablet) {
       grid-column: 2 / 3;
       grid-row: 2 / 3;
     }
-
   }
 
   &__img {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     z-index: 1;
-    
-    img {
-      object-fit: cover;
+    overflow: hidden;
+    display: block;
+
+    @include respond(desktop) {
+      display: none;
     }
 
     &--desktop {
       display: none;
-    }
 
+      @include respond(desktop) {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        z-index: 1;
+        overflow: hidden;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 50%);
+      }
+    }
   }
 
   &__club-identification {
@@ -63,7 +78,6 @@
 
   &__logo {
     align-self: center;
-
   }
 
   &__title {
@@ -72,6 +86,5 @@
       size: 4vmin;
       weight: $font-weight-bold;
     }
-
   }
 }
