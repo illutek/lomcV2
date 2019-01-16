@@ -8,7 +8,7 @@
 
   display: grid;
   grid-template-columns: minmax(2rem, 1fr) minmax(55vw, 75vw)  minmax(2rem, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: repeat(3, 1fr);
   grid-gap: 1rem;
 
   @include respond(desktop) {
@@ -23,6 +23,11 @@
     grid-row: 1 / -1;
     background: rgba($white, .5);
     z-index: 2;
+
+    @include respond(tablet) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
 
   }
 
@@ -52,6 +57,7 @@
 
     @include respond(tablet) {
       grid-template-columns: 1fr 3fr;
+      padding: 2rem;
     }
   }
 
