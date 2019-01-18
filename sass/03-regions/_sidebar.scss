@@ -3,25 +3,30 @@
 // ////////////////////////
 
 .sidebar {
-  display: none;
-  margin: 1rem 0;
+  grid-area: sidebar;
 
   @include respond(desktop) {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    grid-gap: 4rem;
 
-    grid-area: sidebar;
+
   }
 
-  &__cta {}
+  &__cta {
+    display: flex;
+  }
 
   &__photos {
     overflow: hidden;
+    display: none;
 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1.5rem;
+    @include respond(desktop) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1.5rem;
+    }
+
 
   }
-}  
+}

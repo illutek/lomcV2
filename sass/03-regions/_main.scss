@@ -5,15 +5,20 @@
 .main {
   padding: 3rem 0 11rem;
   grid-area: main;
-  
+
   &__wrapper {
     grid-area: wrapper;
 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+    grid-template-areas:
+      "sidebar"
+      "content";
+
     @include respond(desktop) {
-      display: grid;
       grid-template-columns: 4fr 2fr;
-      grid-gap: 2rem;
-      grid-template-areas: 
+      grid-template-areas:
         "content sidebar"
     }
   }
@@ -22,5 +27,5 @@
     grid-area: content;
   }
 
-  
+
 }
