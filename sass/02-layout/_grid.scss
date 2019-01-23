@@ -2,9 +2,14 @@
 // @@ GRID
 // ////////////////////////
 
-.grid__container {
-  display: grid;
-  grid-template-columns: minmax(2rem, 1fr) minmax(55vw, 75vw)  minmax(2rem, 1fr);
-  grid-template-areas: 
-    ". wrapper .";
+.grid {
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) minmax(55vw, 75vw) minmax(2rem, 1fr);
+    grid-template-areas: ". wrapper .";
+  }
+
+  &__row {
+    grid-area: wrapper;
+  }
 }

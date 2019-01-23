@@ -4,7 +4,7 @@
 
 .footer {
   background: $blue-green;
-  position: fixed;
+  // position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -13,7 +13,10 @@
 
   grid-area: footer;
 
-  &__wrapper {
-    grid-area: wrapper;
+  // &__wrapper {
+  //   grid-area: wrapper;
+  // }
+
+  &__logo {
   }
 }

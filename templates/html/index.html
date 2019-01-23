@@ -12,7 +12,7 @@
 
 <body>
   <!-- Navigation top for mobile view -->
-  <div class="navigation">
+  <div class="nav--top">
     <div class="hamburger">
       <span>MENU</span>
       <div class="hamburger__button">
@@ -90,24 +90,24 @@
 
     </header>
 
-    <nav class="navigation-desktop">
+    <nav class="nav--header">
       <div class="grid__container">
-        <div class="navigation-desktop__wrapper">
-          <ul class="navigation-desktop__items">
-            <li class="navigation-desktop__item">
-              <a class="navigation-desktop__link" href="#">Home</a>
+        <div class="grid__row">
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Home</a>
             </li>
-            <li class="navigation-desktop__item">
-              <a class="navigation-desktop__link" href="#">Contact</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Contact</a>
             </li>
-            <li class="navigation-desktop__item">
-              <a class="navigation-desktop__link" href="#">Linken</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Linken</a>
             </li>
-            <li class="navigation-desktop__item">
-              <a class="navigation-desktop__link" href="#">Foto's</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Foto's</a>
             </li>
-            <li class="navigation-desktop__item">
-              <a class="navigation-desktop__link" href="#">Lid worden</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Lid worden</a>
             </li>
           </ul>
         </div>
@@ -116,34 +116,37 @@
 
     <main class="main">
       <div class="grid__container">
-        <div class="main__wrapper">
-          <div class="main__content">
-            <h2>Voorstelling Limburgse Oude Motoren Club</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              iaculis odio nibh, ac semper urna rhoncus feugiat. Aliquam non
-              euismod diam, facilisis finibus felis. Integer ultrices nisi
-              sollicitudin lacus dapibus rutrum. Sed aliquet ornare sapien a
-              cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              a nulla ac nisl dapibus euismod vel in enim. Vivamus quis libero vel
-              tellus sagittis efficitur vel sit amet quam.
-              <a href="www.google.com">Google</a>
-            </p>
+        <div class="grid__row">
+          <div class="main__wrapper">
+            <div class="main__content">
+              <h2>Voorstelling Limburgse Oude Motoren Club</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+                iaculis odio nibh, ac semper urna rhoncus feugiat. Aliquam non
+                euismod diam, facilisis finibus felis. Integer ultrices nisi
+                sollicitudin lacus dapibus rutrum. Sed aliquet ornare sapien a
+                cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                a nulla ac nisl dapibus euismod vel in enim. Vivamus quis libero vel
+                tellus sagittis efficitur vel sit amet quam.
+                <a href="www.google.com">Google</a>
+              </p>
+            </div>
+
+            <aside class="sidebar">
+              <div class="sidebar__cta">
+                <a href="#" class="btn btn--green btn--full-width">
+                  Lid worden van onze club
+                </a>
+              </div>
+
+              <div class="sidebar__photos">
+                <img src="../../images/html-img/DSC02645.JPG" alt="">
+                <img src="../../images/html-img/DSCN5653.jpg" alt="">
+                <img src="../../images/html-img/DSCN5657.jpg" alt="">
+              </div>
+            </aside>
           </div>
 
-          <aside class="sidebar">
-            <div class="sidebar__cta">
-              <a href="#" class="btn btn--green btn--full-width">
-                Lid worden van onze club
-              </a>
-            </div>
-
-            <div class="sidebar__photos">
-              <img src="../../images/html-img/DSC02645.JPG" alt="">
-              <img src="../../images/html-img/DSCN5653.jpg" alt="">
-              <img src="../../images/html-img/DSCN5657.jpg" alt="">
-            </div>
-          </aside>
 
         </div>
       </div>
@@ -155,13 +158,47 @@
   <!-- end of page -->
 
   <footer class="footer">
-    <div class="grid__container">
 
-      <div class="footer__wrapper">
-        Footer
+    <div class="footer__top">
+
+      <nav class="nav--footer">
+        <div class="grid__container">
+          <div class="grid__row">
+            <ul class="nav__items">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Home</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Contact</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Linken</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Foto's</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Lid worden</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="footer__bottom">
+
+      <div class="footer__logo">
+        <div class="grid__container">
+          <div class="grid__row">
+            <img src="../../images/logo.jpg" alt="LOMC Logo" />
+          </div>
+        </div>
       </div>
 
     </div>
+
   </footer>
 
   <script src="../../js/menu.js"></script>
