@@ -15,7 +15,7 @@
   background: $metallic-seaweed;
   transition: all 0.9s;
 
-  @include respond(desktop) {
+  @include mq(desktop) {
     display: none;
   }
 

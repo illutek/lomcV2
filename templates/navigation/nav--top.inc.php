@@ -1,0 +1,14 @@
+<?php 
+/**
+ * 
+ *  
+*/
+?>
+<div class="nav--top">
+  <div class="hamburger">
+    <span>MENU</span>
+    <div class="hamburger__button">
+      <span class="hamburger__icon--open">&nbsp;</span>
+    </div>
+  </div>
+</div>

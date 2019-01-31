@@ -1,0 +1,66 @@
+<div class="grid__container">
+        <div class="grid__row">
+          <div class="front__main__wrapper">
+
+            <div class="front__main__content">
+              <h2>Voorstelling Limburgse Oude Motoren Club</h2>
+              <p>
+                De belangrijkste doelstelling van de "LOMC vzw" is uiteraard de belangen van haar 200-tal leden 
+                behartigen. Wij willen onze aangeslotenen helpen bij het restaureren van oude motoren en hen tevens
+                 stimuleren om er mee te rijden. We discrimineren niet op basis van merk, land van herkomst, of 
+                 traditionele indelingen zoals "pioneer", "veteran", "vintage" of "classic". Slechts op één 
+                 criterium zijn we zeer kritisch: we laten alleen maar motorfietsen toe die voor (of in) 1965 
+                 gebouwd werden. Sedert een aantal jaren zijn we eveneens lid van de Belgische Federatie voor 
+                 Oude Voertuigen (BFOV). Hierdoor kunnen we onze leden ook een interessante (lees goedkope) 
+                 BA verzekering aanbieden.
+              </p>
+            </div>
+
+            <div class="front__main__sub-content">
+              <div class="grid__container">
+                <div class="grid__row">
+                  <div class="sub__content">
+                    <div class="activities__content">
+                      <h3>Activiteiten</h3>
+                      <img class="image__content" src="../../images/html-img/DSC02645.JPG" alt="">
+                      <p>Het maken van toeristische clubritten met de oude motorfietsen: dat kunnen zowel halve 
+                      dagritten ( vertrek om 13uur 15) , dagritten ( vertrek om 9u30 ) , als weekenduitstappen 
+                      zijn. Alle ritten vertrekken aan café “ De jail “ aan de kerk van Stokrooie. We verzamelen 
+                      steeds  een kwartier vroeger (dus om 13u of 9u15). Hoogtepunten zijn jaarlijks de 
+                      "Moeder Lambik Promenade" die tevens open staat voor andere clubs en niet-leden.
+                      </p>
+                    </div>
+                    <div class="insurance__content">
+                      <h3>Verzekering</h3>
+                      <p>
+                      De leden van onze club genieten van een zeer voordelige Oldtimer verzekering. Deze 
+                      verzekering bevat ook pechverhelping, "The classic assistance", en dit 24u/24u in heel 
+                      België. Als u een panne of een ongeluk heeft kan u bellen naar het nummer dat vermeld 
+                      staat op de groene kaart . Opgelet , om van de pechverhelping te kunnen genieten moet 
+                      uw nummerplaat gekend zijn door de verzekering . Als jouw nummerplaat vermeld staat op 
+                      je groene kaart dan is dat OK . Anders bel je even naar Marsh en geef je het nummer door .
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="sidebar">
+              <div class="sidebar__cta">
+                <a href="#" class="btn btn--green btn--full-width">
+                  Lid worden van onze club
+                </a>
+              </div>
+
+              <div class="sidebar__photos">
+                <img src="../../images/html-img/DSC02645.JPG" alt="">
+                <img src="../../images/html-img/DSCN5653.jpg" alt="">
+                <img src="../../images/html-img/DSCN5657.jpg" alt="">
+              </div>
+            </aside>
+
+          </div>
+
+        </div>
+      </div>

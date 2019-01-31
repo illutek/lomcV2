@@ -1,23 +1,23 @@
 // /////////////////////////
-// @@ PAGE
+// @@ FRONT-PAGE
 // ////////////////////////
 
-.page {
+.front__page {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
   grid-template-areas:
     "header"
-    "main"
+    "front-main"
     "footer";
 
-  @include respond(tablet) {
+  @include mq(tablet) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     grid-template-areas: 
       "header"
       "nav-desktop"
-      "main"
+      "front-main"
       "footer";
   }
 }

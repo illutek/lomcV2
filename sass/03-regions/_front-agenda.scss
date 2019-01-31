@@ -1,0 +1,36 @@
+// //////////////////////////////
+// @@ FRONT-AGENDA
+// //////////////////////////////
+
+.front {
+
+  &__agenda {
+    grid-area: agenda;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    grid-template-areas: 
+      "header"
+      "date"
+      "body"
+      "btn";
+
+    border: solid 2px $red;
+    padding: 2rem;
+  }
+}
+
+.agenda {
+
+  &__date {
+    background: $metallic-seaweed;
+    color: $white;
+    padding: 1rem 1.5rem;
+    justify-self: start;
+  }
+
+  &__read-more {
+    justify-self: end;
+  }
+}

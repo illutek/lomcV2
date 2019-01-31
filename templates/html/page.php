@@ -1,3 +1,10 @@
+
+<?php
+/**
+ * page.html.twig
+ */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,33 +19,10 @@
 
 <body>
   <!-- Navigation top for mobile view -->
-  <div class="nav--top">
-    <div class="hamburger">
-      <span>MENU</span>
-      <div class="hamburger__button">
-        <span class="hamburger__icon--open">&nbsp;</span>
-      </div>
-    </div>
-  </div>
+  <?php include '../navigation/nav--top.inc.php'; ?>
 
   <!-- menu overlay only for mobile view -->
-  <div class="menu-overlay">
-
-    <div class="close__button">
-      <span class="hamburger__icon--close">&nbsp;</span>
-    </div>
-    <nav class="menu-overlay__list">
-
-      <ul class="menu-overlay__items">
-        <li class="menu-overlay__item">Home</li>
-        <li class="menu-overlay__item">Contact</li>
-        <li class="menu-overlay__item">Linken</li>
-        <li class="menu-overlay__item">Foto's</li>
-        <li class="menu-overlay__item">Lid worden</li>
-      </ul>
-
-    </nav>
-  </div>
+  <?php include '../navigation/nav--overlay.inc.php'; ?>
 
   <div class="page">
 
@@ -90,29 +74,7 @@
 
     </header>
 
-    <nav class="nav--header">
-      <div class="grid__container">
-        <div class="grid__row">
-          <ul class="nav__items">
-            <li class="nav__item">
-              <a class="nav__link" href="#">Home</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Contact</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Linken</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Foto's</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Lid worden</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <?php include '../navigation/nav--header.inc.php'; ?>
 
     <main class="main">
       <div class="grid__container">
@@ -145,14 +107,13 @@
                 <img src="../../images/html-img/DSCN5657.jpg" alt="">
               </div>
             </aside>
-          </div>
 
+            
+          </div>
 
         </div>
       </div>
-
     </main>
-
 
   </div>
   <!-- end of page -->
@@ -164,10 +125,13 @@
       <nav class="nav--footer">
         <div class="grid__container">
           <div class="grid__row">
-            <ul class="nav__items">
+            <ul class="nav__items nav__items--footer">
               <li class="nav__item">
                 <a class="nav__link" href="#">Home</a>
               </li>
+              <li class="nav__item">
+                  <a class="nav__link" href="#">Agenda</a>
+                </li>
               <li class="nav__item">
                 <a class="nav__link" href="#">Contact</a>
               </li>
@@ -188,15 +152,19 @@
     </div>
 
     <div class="footer__bottom">
-
-      <div class="footer__logo">
-        <div class="grid__container">
-          <div class="grid__row">
+      <div class="grid__container">
+        <div class="grid__row">
+          <div class="footer__bottom-wrap">
+            <div class="footer__logo">
             <img src="../../images/logo.jpg" alt="LOMC Logo" />
           </div>
+          <div class="footer__copy">
+            Copyright 2019 | LOMC
+          </div>
+          </div>
+          
         </div>
       </div>
-
     </div>
 
   </footer>

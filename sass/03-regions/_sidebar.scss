@@ -3,9 +3,9 @@
 // ////////////////////////
 
 .sidebar {
-  grid-area: sidebar;
+  
 
-  @include respond(desktop) {
+  @include mq(desktop) {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 4rem;
@@ -21,7 +21,7 @@
     overflow: hidden;
     display: none;
 
-    @include respond(desktop) {
+    @include mq(desktop) {
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 1.5rem;

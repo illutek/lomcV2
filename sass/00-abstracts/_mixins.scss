@@ -2,7 +2,7 @@
 // @@ MIXINS 
 // ////////////////////////
 
-@mixin respond($breakpoint) {
+@mixin mq($breakpoint) {
   @if $breakpoint == phone {
     @media only screen and (min-width: 30em) {@content};  //more than 480px
   }

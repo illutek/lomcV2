@@ -1,0 +1,44 @@
+// //////////////////////////////
+// @@ FRONT-MAIN
+// //////////////////////////////
+
+.front {
+  &__main {
+    padding: 3rem 0;
+    grid-area: front-main;
+
+    &-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 4rem;
+      align-items: start;
+      grid-template-areas:
+        "agenda"
+        "main-content"
+        "sidebar"
+        "sub-content";
+
+      @include mq(desktop) {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+          "agenda sidebar"
+          "main-content sidebar"
+          "sub-content sidebar";
+      }
+    }
+  }
+
+  &__main-content {
+    grid-area: main-content;
+  }
+
+  &__sub-content {
+    grid-area: sub-content;
+  }
+
+}
+
+
+.sidebar {
+  grid-area: sidebar;
+}

@@ -1,0 +1,24 @@
+// //////////////////////////////
+// @@ IMAGES
+// //////////////////////////////
+
+.image {
+
+  &__content {
+    width: 100%;
+    display: block;
+
+    @include mq(tablet) {
+      width: 35vw;
+      float: left;
+      margin-right: 2rem;
+    }
+
+    @include mq(desktop) {
+      width: 15vw;
+      float: left;
+      margin-right: 2rem;
+    }
+
+  }
+}

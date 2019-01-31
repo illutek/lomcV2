@@ -14,7 +14,7 @@
     left: 0;
     z-index: 190;
 
-    @include respond(desktop) {
+    @include mq(desktop) {
       display: none;
     }
 
@@ -32,24 +32,29 @@
     padding: 1rem 0;
     grid-area: nav-desktop;
 
-    @include respond(desktop) {
+    @include mq(desktop) {
       display: block;
     }
 
   }
 
   &--footer {
+    display: none;
 
+    @include mq(desktop) {
+      display: block;
+    }
   }
 
-  // &__wrapper {
-  //   grid-area: wrapper;
-  // }
 
   &__items {
     list-style: none;
     padding-left: 0;
     display: flex;
+
+    &--footer {
+      justify-content: center;
+    }
   }
 
   &__item {
