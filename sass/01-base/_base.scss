@@ -22,6 +22,21 @@ body {
   overflow-x: hidden;
 }
 
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: $blue-green;
+  text-decoration: none;
+
+  &:after {
+    content: "";
+    border-bottom: 1px solid $blue-green;
+    width: 100%;
+  }
+}
+
 img {
   width: 100%;
   height: auto;

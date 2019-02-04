@@ -34,6 +34,9 @@
 
   &__sub-content {
     grid-area: sub-content;
+
+    display: grid;
+    grid-gap: 4rem;
   }
 
 }

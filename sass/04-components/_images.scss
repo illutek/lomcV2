@@ -7,6 +7,7 @@
   &__content {
     width: 100%;
     display: block;
+    margin-bottom: 2rem;
 
     @include mq(tablet) {
       width: 35vw;
@@ -15,9 +16,10 @@
     }
 
     @include mq(desktop) {
-      width: 15vw;
+      width: 18vw;
       float: left;
       margin-right: 2rem;
+      margin-bottom: 0;
     }
 
   }

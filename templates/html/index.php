@@ -79,21 +79,38 @@
     <main class="front__main">
     <div class="grid__container">
         <div class="grid__row">
+
           <div class="front__main-wrap">
 
             <div class="front__agenda">
-              <h3>35ste LOMC oldtimer motorbeurs</h3>
-              <div class="agenda__date">
-                <div>zaterdag, 24 november, 2018</div> 
+              <div class="agenda__header">
+                <h3>35ste LOMC oldtimer motorbeurs</h3>
               </div>
-              <p>Na een overgangsjaar zonder beurs in 2017 is er op zaterdag 24 november 2018 weer de mooie en 
-              gezellige clubbeurs van de Limburgse Oude Motoren Club .<br>Deze gaat keer het door in zaal Panishof,
-              </p>
+
+              <div class="agenda__date">
+                <div> 
+                  <span class="date__day">
+                    24
+                  </span>
+                  <span class="date__month">november</span>
+                  <span class="date__year">
+                    2018
+                  </span>
+                </div> 
+              </div>
+
+              <div class="agenda__body">
+                <p>Na een overgangsjaar zonder beurs in 2017 is er op zaterdag 24 november 2018 weer de mooie en 
+                gezellige clubbeurs van de Limburgse Oude Motoren Club .<br>Deze gaat keer het door in zaal Panishof,
+                </p>
+              </div>
+              
               <div class="read-more agenda__read-more">
                 <a class="btn btn--red" href="#">Lees meer</a>
               </div>
+            </div> <!-- end front__agenda -->
 
-            </div>
+
             <div class="front__main-content">
               <h2>Voorstelling Limburgse Oude Motoren Club</h2>
                 <p>
@@ -117,6 +134,27 @@
                       steeds  een kwartier vroeger (dus om 13u of 9u15). Hoogtepunten zijn jaarlijks de 
                       "Moeder Lambik Promenade" die tevens open staat voor andere clubs en niet-leden.
                     </p>
+                    <p>
+                    Het houden van clubavonden op de eerste dinsdag van elke maand om 20u30 , in zaal "Stokrode" te 
+                    Stokrooi Hasselt ( St Amandusstraat) . Deze avond omvat meestal een officiëel gedeelte waarbij 
+                    de komende activiteiten uit de doeken worden gedaan, gevolgd door een vormingsactiviteit waarbij 
+                    telkens één of meerdere problemen aan bod komen i.v.m. onze hobby. Zie " actueel " voor het 
+                    onderwerp van volgende maand. Uiteraard is dit ook de gelegenheid voor een gezellige babbel 
+                    onder de leden. Op deze clubavonden is overigens iedereen welkom, ook niet leden.
+                    </p>
+                    <p>
+                    Ook onze jaarlijkse beurs met tentoonstelling in Helchteren is telkens een echte oldtimerhappening, 
+                    waarbij we ons echt concentreren op oude motoren . Inmiddels is onze beurs een begrip geworden 
+                    bij de echte liefhebbers.
+                    </p>
+                    <p>
+                    Regelmatig organiseren we ook een busuitstap naar grote beurzen (Utrecht of Mannheim bvb.). Dit kan voor 
+                    clubleden aan gunstige tarieven net zoals voor andere clubactiviteiten (Moeder Lambik , onze beurs...)
+                    </p>
+                    <p>
+                    Tenslotte bezorgen we aan onze leden elke twee maanden een exemplaar van Motor Rijwiel en elke 
+                    drie maanden een apart clubblaadje waarin zij geïnformeerd worden van de typische clubactiviteiten.
+                    </p>
                   </div>
                   <div class="insurance__content">
                     <h3>Verzekering</h3>
@@ -128,6 +166,17 @@
                       uw nummerplaat gekend zijn door de verzekering . Als jouw nummerplaat vermeld staat op 
                       je groene kaart dan is dat OK . Anders bel je even naar Marsh en geef je het nummer door .
                     </p>
+                    <p>
+                    We hebben een tool aangemaakt om verzekeringsaanvragen via het internet in te voeren. 
+                    Iedere liefhebber, lid van een club aangesloten aan de BFOV, zal niet langer meer via 
+                    het secretariaat van de club moeten gaan om een verzekeringsaanvraag in te dienen bij de
+                     BFOV. Hij zal voortaan deze aanvraag online kunnen registreren maar de verantwoordelijke 
+                     voor de verzekeringen binnen uw club dient nog wel een email te beantwoorden als bevestiging.
+                    </p>
+                    <p>Deze procedure heeft als voordeel dat MARSH de aanvraag onmiddellijk kan behandelen van 
+                      zodra de bevestiging gebeurde, wat een tijdswinst is voor uw leden.
+                    </p>
+                    <p>Ga naar <a href="www.bfov.be">www.bfov.be</a></p>
                   </div>
               </div>
             <aside class="sidebar">

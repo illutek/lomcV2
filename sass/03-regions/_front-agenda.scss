@@ -18,19 +18,67 @@
 
     border: solid 2px $red;
     padding: 2rem;
+
+    @include mq(desktop) {
+      grid-template-columns: 1fr 4fr;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: 
+        "date header"
+        "date body"
+        ". btn";
+    }
+
   }
 }
 
 .agenda {
 
+  &__header {
+    grid-area: header;
+  }
+
   &__date {
+    grid-area: date;
+
     background: $metallic-seaweed;
     color: $white;
     padding: 1rem 1.5rem;
     justify-self: start;
+
+    @include mq(desktop) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+  }
+
+  &__body {
+    grid-area: body;
+
   }
 
   &__read-more {
+    grid-area: btn;
     justify-self: end;
   }
+
+}
+
+.date {
+
+  &__day {
+    @include mq(desktop) {
+      font: {
+        size: 4rem;
+        weight: 700;
+      }
+      line-height: 4rem;
+    }
+  }
+
+  &__month {}
+
+  &__year {}
 }
