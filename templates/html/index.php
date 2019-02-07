@@ -84,7 +84,7 @@
 
             <div class="front__agenda">
               <div class="agenda__header">
-                <h3>35ste LOMC oldtimer motorbeurs</h3>
+                <h3>35ste LOMC oldtimer motorbeurs, een langere titel zou ook moeten kunnen.</h3>
               </div>
 
               <div class="agenda__date">

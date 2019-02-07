@@ -6,33 +6,27 @@
   &,
   &:link,
   &:visited {
-    color: $white;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    transition: all .3s;
+    @include btn;
   }
 
   &:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba($black,.3);
+    @include box-shadow;
   }
 
   &:active,
   &:focus {
     outline: none;
     transform: translateY(-1px);
-    box-shadow: 0 1rem 2rem rgba($black,.3);
+    @include box-shadow;
   }
 
   &--green {
-    background: $blue-green;
-
+    @include btn($blue-green);
   }
 
   &--red {
-    background: $red;
+    @include btn($red);
   }
 
   &--full-width {

@@ -3,16 +3,17 @@
 // ////////////////////////
 
 html {
-  font-family: $font-family;
+  font-family: $ff-sans;
 }
 
 body {
-  font-size: $base-font-size;
+  font-size: $ff-size;
+  color: $clr-text;
   line-height: 2rem;
 }
 
 h1, h2, h3, h4 {
-  font-weight: 700;
+  font-weight: $fw-bold;
 }
 
 h1 {

@@ -1,22 +1,50 @@
 // /////////////////////////
-// @@ MIXINS 
+// @@ MIXINS
 // ////////////////////////
 
 @mixin mq($breakpoint) {
   @if $breakpoint == phone {
-    @media only screen and (min-width: 30em) {@content};  //more than 480px
+    @media only screen and (min-width: 30em) {
+      @content;
+    } //more than 480px
   }
 
   @if $breakpoint == tablet {
-    @media only screen and (min-width: 37.5em) {@content};  //more than 600px
+    @media only screen and (min-width: 37.5em) {
+      @content;
+    } //more than 600px
   }
 
   @if $breakpoint == desktop {
-    @media only screen and (min-width: 62.5em) {@content};  //more than 1000px
+    @media only screen and (min-width: 62.5em) {
+      @content;
+    } //more than 1000px
   }
 
   @if $breakpoint == big-desktop {
-    @media only screen and (min-width: 118.75em) {@content};  //more than 1900px
+    @media only screen and (min-width: 118.75em) {
+      @content;
+    } //more than 1900px
   }
+}
 
+@mixin box-shadow(
+  $vo: 0,
+  $ho: 1rem,
+  $blur: 2rem,
+  $spread: 0,
+  $color: rgba($black, 0.3)
+) {
+  box-shadow: $vo $ho $blur $spread $color;
+}
+
+@mixin btn($bg: transparant) {
+  color: $white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+  display: inline-block;
+  background: $bg;
 }

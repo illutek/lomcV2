@@ -20,7 +20,7 @@
     padding: 2rem;
 
     @include mq(desktop) {
-      grid-template-columns: 1fr 4fr;
+      grid-template-columns: minmax(13rem, 14rem) 4fr;
       grid-template-rows: repeat(3, auto);
       grid-template-areas: 
         "date header"
