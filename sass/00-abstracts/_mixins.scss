@@ -2,29 +2,35 @@
 // @@ MIXINS
 // ////////////////////////
 
-@mixin mq($breakpoint) {
-  @if $breakpoint == phone {
-    @media only screen and (min-width: 30em) {
-      @content;
-    } //more than 480px
-  }
+// new mediaquery with maps
+// an improvement over the debullensteeg https://github.com/illutek/bullensteeg
 
-  @if $breakpoint == tablet {
-    @media only screen and (min-width: 37.5em) {
-      @content;
-    } //more than 600px
-  }
+$breakpoints: (
+  phone: 30em,
+  //more than 480px
+    tablet: 37.5em,
+  //more than 600px
+    desktop: 62.5em,
+  //more than 1000px
+    big-desktop: 118.75em //more than 1900px
+);
 
-  @if $breakpoint == desktop {
-    @media only screen and (min-width: 62.5em) {
-      @content;
-    } //more than 1000px
-  }
+@mixin mq($size) {
+  @if map-has-key($breakpoints, $size) {
+    // a value in the map
+    $breakpoint: map-get($breakpoints, $size);
 
-  @if $breakpoint == big-desktop {
-    @media only screen and (min-width: 118.75em) {
+    @media screen and (min-width: $breakpoint) {
       @content;
-    } //more than 1900px
+    }
+  } @else if type-of($size) == number and not unitless($size) {
+    // a custom value px or em
+    @media screen and (min-width: $size) {
+      @content;
+    }
+  } @else {
+    // no map-value or number
+    @error 'The breakpoints map does not have the key of `#{$size}`';
   }
 }
 
@@ -38,13 +44,13 @@
   box-shadow: $vo $ho $blur $spread $color;
 }
 
-@mixin btn($bg: transparant) {
-  color: $white;
+@mixin btn($clr, $bg) {
+  color: $clr;
+  background: $bg;
   padding: 1rem 2rem;
   text-decoration: none;
   cursor: pointer;
   border: none;
   transition: all 0.3s;
   display: inline-block;
-  background: $bg;
 }
