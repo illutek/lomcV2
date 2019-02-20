@@ -6,13 +6,10 @@
 // an improvement over the debullensteeg https://github.com/illutek/bullensteeg
 
 $breakpoints: (
-  phone: 30em,
-  //more than 480px
-    tablet: 37.5em,
-  //more than 600px
-    desktop: 62.5em,
-  //more than 1000px
-    big-desktop: 118.75em //more than 1900px
+  phone: 30em,  //more than 480px
+  tablet: 37.5em,  //more than 600px
+  desktop: 62.5em,  //more than 1000px
+  big-desktop: 118.75em   //more than 1900px
 );
 
 @mixin mq($size) {
@@ -53,4 +50,11 @@ $breakpoints: (
   border: none;
   transition: all 0.3s;
   display: inline-block;
+}
+
+@mixin hover($translateY: -0.3rem) {
+  &:hover {
+    transform: translateY($translateY);
+    @include box-shadow;
+  }
 }

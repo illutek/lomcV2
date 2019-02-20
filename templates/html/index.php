@@ -82,7 +82,8 @@
 
           <div class="front__main-wrap">
 
-            <div class="front__agenda">
+            <a href="#" class="front__agenda">
+              
               <div class="agenda__header">
                 <h3>35ste LOMC oldtimer motorbeurs, een langere titel zou ook moeten kunnen.</h3>
               </div>
@@ -106,9 +107,10 @@
               </div>
               
               <div class="read-more agenda__read-more">
-                <a class="btn btn--red" href="#">Lees meer</a>
+                <div class="btn btn--red">Lees meer</div>
               </div>
-            </div> <!-- end front__agenda -->
+
+            </a> <!-- end front__agenda -->
 
 
             <div class="front__main-content">

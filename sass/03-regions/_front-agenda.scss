@@ -18,6 +18,11 @@
 
     border: solid 2px $red;
     padding: 2rem;
+    text-decoration: none;
+    color: $clr-text;
+    transition: all 0.3s;
+   
+    @include hover();
 
     @include mq(desktop) {
       grid-template-columns: minmax(13rem, 14rem) 4fr;
