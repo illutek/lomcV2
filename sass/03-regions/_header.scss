@@ -87,11 +87,12 @@
     }
   }
 
-  &__logo {
-    align-self: center;
-  }
+  &__logo {}
 
   &__title {
     margin-left: 2rem;
+    text: {
+      align: center;
+    }
   }
 }
