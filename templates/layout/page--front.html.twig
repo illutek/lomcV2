@@ -1,0 +1,169 @@
+
+{#
+/**
+ *
+ *
+*/
+#}
+
+  <!-- Navigation top for mobile view -->
+  {% include directory ~ '/templates/navigation/nav--top.html.twig' %}
+
+  <!-- menu overlay only for mobile view -->
+  {% include directory ~ '/templates/navigation/nav--overlay.html.twig' %}
+
+  <div class="front__page">
+
+    <!-- header -->
+    <header class="header">
+      <!-- <div class="header__overlay"></div> -->
+
+      <!-- one image random -->
+      <div class="header__img">
+        <img src="../../images/html-img/black-white01.jpg" alt="" />
+      </div>
+
+      <!-- collection of images placed by grid random ordered -->
+      <div class="header__img--desktop">
+        <img src="../../images/html-img/DSC02645.JPG" alt="">
+        <img src="../../images/html-img/DSC02650.JPG" alt="">
+        <img src="../../images/html-img/DSC02661.JPG" alt="">
+        <img src="../../images/html-img/DSCN5654.jpg" alt="">
+        <img src="../../images/html-img/DSCN5656.jpg" alt="">
+        <img src="../../images/html-img/DSCN5657.jpg" alt="">
+        <img src="../../images/html-img/DSCN5712.jpg" alt="">
+        <img src="../../images/html-img/mlp2006-(101).jpg" alt="">
+      </div>
+
+      <div class="header__img--big-desktop">
+        <img src="../../images/html-img/DSC02645.JPG" alt="">
+        <img src="../../images/html-img/DSC02650.JPG" alt="">
+        <img src="../../images/html-img/DSC02661.JPG" alt="">
+        <img src="../../images/html-img/DSCN5654.jpg" alt="">
+        <img src="../../images/html-img/DSCN5656.jpg" alt="">
+        <img src="../../images/html-img/DSCN5657.jpg" alt="">
+        <img src="../../images/html-img/DSCN5712.jpg" alt="">
+        <img src="../../images/html-img/mlp2006-(104).jpg" alt="">
+        <img src="../../images/html-img/mlp2006-(101).jpg" alt="">
+        <img src="../../images/html-img/mlp2006-(106).jpg" alt="">
+      </div>
+
+      <div class="header__club-identification">
+        <div class="header__logo">
+          <img src="{{ base_path ~ directory }}/images/logo.jpg" alt="LOMC Logo" />
+        </div>
+
+        <div class="header__title">
+          <h1>{{ site_name }}</h1>
+        </div>
+      </div>
+
+    </header>
+
+    <nav class="nav--header">
+      {% include directory ~ '/templates/navigation/nav--header.html.twig' %}
+    </nav>
+
+    <main class="front__main">
+    <div class="grid__container">
+        <div class="grid__row">
+
+          <div class="front__main-wrap">
+
+          {# agenda region #}
+            <a href="#" class="front__agenda">
+
+              <div class="agenda__header">
+                <h3>35ste LOMC oldtimer motorbeurs, een langere titel zou ook moeten kunnen.</h3>
+              </div>
+
+              <div class="agenda__date">
+                <div> 
+                  <span class="date__day">
+                    24
+                  </span>
+                  <span class="date__month">november</span>
+                  <span class="date__year">
+                    2018
+                  </span>
+                </div> 
+              </div>
+
+              <div class="agenda__body">
+                <p>Na een overgangsjaar zonder beurs in 2017 is er op zaterdag 24 november 2018 weer de mooie en 
+                gezellige clubbeurs van de Limburgse Oude Motoren Club .<br>Deze gaat keer het door in zaal Panishof,
+                </p>
+              </div>
+              
+              <div class="read-more agenda__read-more">
+                <div class="btn btn--red" href="#">Lees meer</div>
+              </div>
+            </a> <!-- end front__agenda -->
+
+
+            <div class="front__main-content">
+            {# aboutus region #}
+              {% include directory ~ '/templates/partials/front-page/aboutus.html.twig' %}
+            </div>
+
+            <div class="front__sub-content">
+
+              <div class="activities__content">
+                <h3>Activiteiten</h3>
+              </div>
+
+              <div class="insurance__content">
+                <h3>Verzekering</h3>
+              </div>
+
+            </div>
+
+            <aside class="sidebar">
+              <div class="sidebar__cta">
+                <a href="#" class="btn btn--green btn--full-width">
+                  Lid worden van onze club
+                </a>
+              </div>
+
+              <div class="sidebar__photos">
+                {# sidebar photos #}
+              </div>
+            </aside>
+
+          </div>
+        </div>
+    </div>
+    </main>
+
+   
+
+  </div>
+  <!-- end of page -->
+
+  <footer class="footer">
+
+    <div class="footer__top">
+      <nav class="nav--footer">
+        {% include directory ~ '/templates/navigation/nav--header.html.twig' %}
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="grid__container">
+        <div class="grid__row">
+          <div class="footer__bottom-wrap">
+            <div class="footer__logo">
+              <img src="{{ base_path ~ directory }}/images/logo.jpg" alt="LOMC Logo" />
+            </div>
+            <div class="footer__copy">
+              Copyright {{ "now"|date("Y") }} | LOMC
+            </div>
+        </div>
+          
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="../../js/menu.js"></script>

@@ -9,3 +9,7 @@ version: 1.0.0
 libraries:
   - lomc/globalstyle
   - lomc/fonts
+  - lomc/javascript
+
+regions:
+  aboutus: 'about us'
