@@ -6,13 +6,10 @@
   &,
   &:link,
   &:visited {
-    @include btn;
+    @include btn(transparant, transparant);
   }
 
-  &:hover {
-    transform: translateY(-0.3rem);
-    @include box-shadow;
-  }
+  @include hover();
 
   &:active,
   &:focus {
@@ -22,11 +19,12 @@
   }
 
   &--green {
-    @include btn($blue-green);
+    @include btn($btn-green...);
   }
 
   &--red {
-    @include btn($red);
+    // mixin btn bundled with a list on _variables.scss
+    @include btn($btn-red...);
   }
 
   &--full-width {

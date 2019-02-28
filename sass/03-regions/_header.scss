@@ -8,17 +8,15 @@
 
   display: grid;
   grid-template-columns: minmax(2rem, 1fr) minmax(55vw, 75vw) minmax(2rem, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
   grid-gap: 1rem;
 
   @include mq(tablet) {
     grid-template-columns: minmax(2rem, 1fr) minmax(49vw, 69vw) minmax(2rem, 1fr);
-    max-height: 50vh;
   }
 
   @include mq(desktop) {
     grid-template-columns: minmax(2rem, 1fr) minmax(45vw, 65vw) minmax(2rem, 1fr);
-    max-height: 50vh;
   }
 
   @include mq(desktop) {
@@ -40,7 +38,6 @@
 
     &--desktop {
       display: none;
-      align-self: end;
 
       @include mq(tablet) {
         grid-column: 1 / -1;
@@ -74,36 +71,28 @@
   &__club-identification {
     z-index: 3;
     background: rgba($white, 0.5);
-    padding: 2rem;
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
+    padding: 1rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 2rem;
+    display: flex;
+    align-items: center;
 
     @include mq(tablet) {
-      grid-column: 2 / 3;
-
-      grid-template-columns: minmax(15rem, 18rem) 3fr;
-      justify-items: center;
-      margin: 3rem 0;
+      padding: 2rem;
     }
 
     @include mq(desktop) {
-      margin: 7rem 0;
+      padding: 3rem;
     }
   }
 
-  &__logo {
-    align-self: center;
-  }
+  &__logo {}
 
   &__title {
-    align-self: center;
-    font: {
-      size: 3vmin;
-      weight: $fw-bold;
+    margin-left: 2rem;
+    text: {
+      align: center;
     }
   }
 }

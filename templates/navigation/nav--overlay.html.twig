@@ -1,6 +1,6 @@
 {#
 /**
- *
+ * SCSS regions/_menu-overlay.scss
 */
 #}
 
@@ -12,12 +12,23 @@
   <nav class="menu-overlay__list">
 
     <ul class="menu-overlay__items">
-      <li class="menu-overlay__item">Home</li>
-      <li class="menu-overlay__item">Agenda</li>
-      <li class="menu-overlay__item">Contact</li>
-      <li class="menu-overlay__item">Linken</li>
-      <li class="menu-overlay__item">Foto's</li>
-      <li class="menu-overlay__item">Lid worden</li>
+      <li class="menu-overlay__item">
+        <a href="{{ path('<front>') }}" class="menu-overlay__link">Home</a></li>
+      <li class="menu-overlay__item">
+        <a href="#" class="menu-overlay__link">Agenda</a>
+      </li>
+      <li class="menu-overlay__item">
+        <a href="#" class="menu-overlay__link">Contact</a>
+      </li>
+      <li class="menu-overlay__item">
+        <a href="#" class="menu-overlay__link">Linken</a>
+      </li>
+      <li class="menu-overlay__item">
+        <a href="#" class="menu-overlay__link">Foto's</a>
+      </li>
+      <li class="menu-overlay__item">
+        <a href="#" class="menu-overlay__link">Lid worden</a>
+      </li>
     </ul>
 
   </nav>

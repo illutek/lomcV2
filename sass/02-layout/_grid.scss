@@ -13,7 +13,7 @@
     }
 
     @include mq(desktop) {
-      grid-template-columns: minmax(1rem, 1fr) minmax(55vw, 120rem) minmax(1rem, 1fr);
+      grid-template-columns: minmax(3rem, 1fr) minmax(55vw, 120rem) minmax(3rem, 1fr);
     }
 
     @include mq(big-desktop) {

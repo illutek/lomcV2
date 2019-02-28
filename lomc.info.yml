@@ -13,3 +13,5 @@ libraries:
 
 regions:
   aboutus: 'about us'
+  activities: Activities
+  content: Content

@@ -1,0 +1,17 @@
+// /////////////////////////
+// @@ READ-MORE
+// ////////////////////////
+
+.read-more {
+  grid-area: btn;
+
+  &--left {
+    justify-self: end;
+  }
+
+  &--right {
+    justify-self: start;
+  }
+  
+
+}
