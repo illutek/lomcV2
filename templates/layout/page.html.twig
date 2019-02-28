@@ -1,0 +1,98 @@
+
+{#
+/**
+ *
+ *
+*/
+#}
+
+  <!-- Navigation top for mobile view -->
+  {% include directory ~ '/templates/navigation/nav--top.html.twig' %}
+
+  <!-- menu overlay only for mobile view -->
+  {% include directory ~ '/templates/navigation/nav--overlay.html.twig' %}
+
+  <div class="front__page">
+
+    <!-- header -->
+    <header class="header">
+      <!-- <div class="header__overlay"></div> -->
+     
+      
+
+      <div class="header__club-identification">
+        <div class="header__logo">
+          <img src="{{ base_path ~ directory }}/images/logo.jpg" alt="LOMC Logo" />
+        </div>
+
+        <div class="header__title">
+          <h1>{{ site_name }}</h1>
+        </div>
+      </div>
+
+    </header>
+
+    <nav class="nav--header">
+      {% include directory ~ '/templates/navigation/nav--header.html.twig' %}
+    </nav>
+
+    <main class="page-main">
+      <div class="grid__container">
+        <div class="grid__row">
+
+          <div class="page-main__wrap">        
+
+            <div class="layout-content">
+              {{ page.content }}
+            </div>{# /.layout-content #}
+
+            <aside class="sidebar">
+              <div class="sidebar__cta">
+                <a href="#" class="btn btn--green btn--full-width">
+                  Lid worden van onze club
+                </a>
+              </div>
+
+              <div class="sidebar__photos">
+                {# sidebar photos #}
+              </div>
+            </aside>
+
+          </div>
+          {# end main-wrap #}
+        </div>
+          {# end grid__row #}
+      </div>
+        {# end grid__container #}
+    </main>
+
+   
+
+  </div>
+  <!-- end of page -->
+
+  <footer class="footer">
+
+    <div class="footer__top">
+      <nav class="nav--footer">
+        {% include directory ~ '/templates/navigation/nav--header.html.twig' %}
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="grid__container">
+        <div class="grid__row">
+          <div class="footer__bottom-wrap">
+            <div class="footer__logo">
+              <img src="{{ base_path ~ directory }}/images/logo.jpg" alt="LOMC Logo" />
+            </div>
+            <div class="footer__copy">
+              Copyright {{ "now"|date("Y") }} | LOMC
+            </div>
+        </div>
+          
+        </div>
+      </div>
+    </div>
+
+  </footer>

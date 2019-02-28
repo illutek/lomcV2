@@ -53,6 +53,7 @@ $breakpoints: (
 }
 
 @mixin hover($translateY: -0.3rem) {
+  cursor: pointer;
   &:hover {
     transform: translateY($translateY);
     @include box-shadow;

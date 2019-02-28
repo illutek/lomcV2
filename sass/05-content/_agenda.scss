@@ -1,16 +1,15 @@
-// //////////////////////////////
-// @@ FRONT-AGENDA
-// //////////////////////////////
+// /////////////////////////////////////
+// @@ AGENDA teaser and full node
+// /////////////////////////////////////
 
-.front {
-
-  &__agenda {
+.agenda {  
+  &__teaser {
     grid-area: agenda;
 
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
-    grid-template-areas: 
+    grid-template-areas:
       "header"
       "date"
       "body"
@@ -27,16 +26,12 @@
     @include mq(desktop) {
       grid-template-columns: minmax(13rem, 14rem) 4fr;
       grid-template-rows: repeat(3, auto);
-      grid-template-areas: 
+      grid-template-areas:
         "date header"
         "date body"
         ". btn";
     }
-
   }
-}
-
-.agenda {
 
   &__header {
     grid-area: header;
@@ -56,23 +51,20 @@
       align-items: center;
       text-align: center;
     }
-
   }
 
   &__body {
     grid-area: body;
-
   }
 
-  &__read-more {
-    grid-area: btn;
-    justify-self: end;
-  }
 
+  &__full-node {
+    
+  }
 }
 
-.date {
 
+.date {
   &__day {
     @include mq(desktop) {
       font: {
@@ -83,7 +75,9 @@
     }
   }
 
-  &__month {}
+  &__month {
+  }
 
-  &__year {}
+  &__year {
+  }
 }

@@ -10,3 +10,13 @@ fonts:
   css:
     theme:
       '//fonts.googleapis.com/css?family=Work+Sans:400,700': { type: external, minified: true }
+
+javascript:
+  js:
+    js/menu.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

@@ -119,6 +119,7 @@ gulp.task('style:dist', function () {
         }))
         .pipe(cleancss({compatibility: 'ie9'}))
         .pipe(sourcemaps.write())
+        .pipe(gulp.dest('css'))
         .pipe(gulp.dest(path.dist.css));
 });
 

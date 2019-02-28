@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ * SCSS content/_activities.scss
+ * 
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'activities',
+    'activities__teaser',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+
+    <h3 class="activities__title">
+      <a class="activities__link" href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h3>
+
+  {# field--field-activities-imh.html.twig #}
+  {{ content.field_activities_img }}
+
+  <div{{ content_attributes.addClass('activities__body') }}>
+    {{ content.body }}
+  </div>
+
+  <div class="read-more read-more--left">
+    <a href="{{ url }}">
+      <div class="btn btn--red">Lees meer</div>
+    </a>
+  </div>
+
+</article>
