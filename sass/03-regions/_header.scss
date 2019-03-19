@@ -25,11 +25,19 @@
 
   grid-area: header;
 
+
+  // node--header-images--full.html.twig
+  // field--field-header-img.html.twig
+  // image.html.twig
+  &__node, &__field, &__img-field {
+    height: 100%;
+  }
+
+
   &__img {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     z-index: 1;
-    overflow: hidden;
     display: block;
 
     @include mq(tablet) {
@@ -40,14 +48,14 @@
       display: none;
 
       @include mq(tablet) {
+        display: block;
         grid-column: 1 / -1;
         grid-row: 1 / -1;
         z-index: 1;
-        overflow: hidden;
+      }
 
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 50%);
+      @include mq(big-desktop) {
+        display: none;
       }
     }
 
@@ -55,17 +63,12 @@
       display: none;
 
       @include mq(big-desktop) {
+        display: block;
         grid-column: 1 / -1;
         grid-row: 1 / -1;
         z-index: 1;
-        overflow: hidden;
-
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2, 50%);
       }
     }
-
   }
 
   &__club-identification {
@@ -87,12 +90,31 @@
     }
   }
 
-  &__logo {}
+  &__logo {
+  }
 
   &__title {
     margin-left: 2rem;
     text: {
       align: center;
     }
+  }
+}
+
+// views-view--header_images_desktop.html.twig
+.grid-header__img--desktop {
+  @include mq(tablet) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 50%);
+  }
+}
+
+
+.grid-header__img--big-desktop {
+  @include mq(tablet) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 50%);
   }
 }

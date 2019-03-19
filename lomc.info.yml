@@ -12,6 +12,9 @@ libraries:
   - lomc/javascript
 
 regions:
+  header_mobile: 'Header mobile'
+  header_desktop: 'Header Desktop'
+  header_bigdesktop: 'Header Big Desktop'
   aboutus: 'about us'
   activities: Activities
   content: Content
