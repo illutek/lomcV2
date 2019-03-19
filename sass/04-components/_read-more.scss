@@ -5,11 +5,12 @@
 .read-more {
   grid-area: btn;
 
-  &--left {
+  &--right {
     justify-self: end;
+    text-align: right;
   }
 
-  &--right {
+  &--left {
     justify-self: start;
   }
   
