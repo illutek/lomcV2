@@ -4,17 +4,16 @@
 
 .activities {
   &__teaser {
-    display: grid;
-    grid-row-gap: 2rem;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "title"
-      "img"
-      "body"
-      "btn";
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // grid-template-areas:
+    //   "title"
+    //   "img"
+    //   "body"
+    //   "btn";
 
     @include mq(tablet) {
-     
+      display: block;
     }
   }
 
@@ -24,6 +23,10 @@
 
   &__link {
     text-decoration: none;
+  }
+
+  &__content {
+    margin: 2rem 0;
   }
 
   &__body {

@@ -19,21 +19,25 @@
   ]
 %}
 {{ attach_library('classy/node') }}
+
+{% set bodytext = content.body|render|striptags %}
+
 <article{{ attributes.addClass(classes) }}>
 
+  <h3 class="activities__title">
+    <a class="activities__link" href="{{ url }}" rel="bookmark">{{ label }}</a>
+  </h3>
 
-    <h3 class="activities__title">
-      <a class="activities__link" href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h3>
+  <div class="activities__content">
+    {# field--field-activities-imh.html.twig #}
+    {{ content.field_activities_img }}
 
-  {# field--field-activities-imh.html.twig #}
-  {{ content.field_activities_img }}
-
-  <div{{ content_attributes.addClass('activities__body') }}>
-    {{ content.body }}
+    <div{{ content_attributes.addClass('activities__body') }}>
+      {{ bodytext|length > 600 ? bodytext|slice(0, 600) ~ ' ...' : bodytext }}
+    </div>
   </div>
 
-  <div class="read-more read-more--left">
+  <div class="read-more read-more--right">
     <a href="{{ url }}">
       <div class="btn btn--red">Lees meer</div>
     </a>
