@@ -1,0 +1,31 @@
+{# 
+/**
+ * The footer region on the page--front.html.twig and page.html.twig
+*/
+#}
+
+<footer class="footer">
+  <div class="footer__top">
+    <nav class="nav--footer">
+      {% include directory ~ '/templates/navigation/nav--header.html.twig' %}
+    </nav>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="grid__container">
+      <div class="grid__row">
+
+        <div class="footer__bottom-wrap">
+          <div class="footer__logo">
+            <img src="{{ base_path ~ directory }}/images/logo.jpg" alt="LOMC Logo" />
+          </div>
+
+          <div class="footer__copy">
+            Copyright {{ "now"|date("Y") }} | LOMC
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

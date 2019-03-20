@@ -3,14 +3,12 @@
 // ////////////////////////
 
 .sidebar {
-  
+  grid-area: sidebar;
 
   @include mq(desktop) {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 4rem;
-
-
   }
 
   &__cta {
@@ -28,6 +26,10 @@
       justify-content: space-between;
     }
 
+  }
 
+  // node--header-images--teaser.html.twig
+  &__images-block {
+    margin-bottom: 2rem;
   }
 }

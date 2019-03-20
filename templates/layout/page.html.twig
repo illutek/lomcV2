@@ -16,19 +16,8 @@
 
     <!-- header -->
     <header class="header">
-      <!-- <div class="header__overlay"></div> -->
      
-      
-
-      <div class="header__club-identification">
-        <div class="header__logo">
-          <img src="{{ base_path ~ directory }}/images/logo.jpg" alt="LOMC Logo" />
-        </div>
-
-        <div class="header__title">
-          <h1>{{ site_name }}</h1>
-        </div>
-      </div>
+       {% include directory ~ '/templates/partials/shared/identification.html.twig' %}
 
     </header>
 
@@ -46,17 +35,8 @@
               {{ page.content }}
             </div>{# /.layout-content #}
 
-            <aside class="sidebar">
-              <div class="sidebar__cta">
-                <a href="#" class="btn btn--green btn--full-width">
-                  Lid worden van onze club
-                </a>
-              </div>
-
-              <div class="sidebar__photos">
-                {# sidebar photos #}
-              </div>
-            </aside>
+            {# sidebar photos #}
+              {% include directory ~ '/templates/partials/shared/sidebar.html.twig' %}
 
           </div>
           {# end main-wrap #}
@@ -66,33 +46,7 @@
         {# end grid__container #}
     </main>
 
-   
-
   </div>
   <!-- end of page -->
 
-  <footer class="footer">
-
-    <div class="footer__top">
-      <nav class="nav--footer">
-        {% include directory ~ '/templates/navigation/nav--header.html.twig' %}
-      </nav>
-    </div>
-
-    <div class="footer__bottom">
-      <div class="grid__container">
-        <div class="grid__row">
-          <div class="footer__bottom-wrap">
-            <div class="footer__logo">
-              <img src="{{ base_path ~ directory }}/images/logo.jpg" alt="LOMC Logo" />
-            </div>
-            <div class="footer__copy">
-              Copyright {{ "now"|date("Y") }} | LOMC
-            </div>
-        </div>
-          
-        </div>
-      </div>
-    </div>
-
-  </footer>
+ {% include directory ~ '/templates/partials/shared/footer.html.twig' %}
