@@ -1,13 +1,12 @@
 // //////////////////////////////
-// @@ FRONT-MAIN
+// @@ FRONT-PAGE-MAIN-CONTENT
 // //////////////////////////////
 
-.front {
-  &__main {
-    padding: 3rem 0;
-    grid-area: front-main;
+.main {
+  margin: 3rem 0;
+  grid-area: main;
 
-    &-wrap {
+  &__front-wrap {
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 4rem;
@@ -26,9 +25,8 @@
           "sub-content sidebar";
       }
     }
-  }
 
-  &__main-content {
+  &__front-content {
     grid-area: main-content;
   }
 

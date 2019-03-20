@@ -2,19 +2,19 @@
 {#
 /**
  *
- *
+ * page.html.twig
 */
 #}
 
-  <!-- Navigation top for mobile view -->
+  {# Navigation top for mobile view #}
   {% include directory ~ '/templates/navigation/nav--top.html.twig' %}
 
-  <!-- menu overlay only for mobile view -->
+  {# menu overlay only for mobile view #}
   {% include directory ~ '/templates/navigation/nav--overlay.html.twig' %}
 
-  <div class="front__page">
+  <div class="page">
 
-    <!-- header -->
+    {# header #}
     <header class="header">
      
        {% include directory ~ '/templates/partials/shared/identification.html.twig' %}
@@ -25,13 +25,13 @@
       {% include directory ~ '/templates/navigation/nav--header.html.twig' %}
     </nav>
 
-    <main class="page-main">
+    <main class="main">
       <div class="grid__container">
         <div class="grid__row">
 
-          <div class="page-main__wrap">        
+          <div class="main__page-wrap">        
 
-            <div class="layout-content">
+            <div class="main__content">
               {{ page.content }}
             </div>{# /.layout-content #}
 
@@ -46,7 +46,8 @@
         {# end grid__container #}
     </main>
 
-  </div>
-  <!-- end of page -->
+  {% include directory ~ '/templates/partials/shared/footer.html.twig' %}
+</div>
+{# end of page #}
 
- {% include directory ~ '/templates/partials/shared/footer.html.twig' %}
+ 

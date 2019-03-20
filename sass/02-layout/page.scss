@@ -2,13 +2,13 @@
 // @@ FRONT-PAGE
 // ////////////////////////
 
-.front__page {
+.page {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
   grid-template-areas:
     "header"
-    "front-main"
+    "main"
     "footer";
 
   @include mq(tablet) {
@@ -17,7 +17,7 @@
     grid-template-areas: 
       "header"
       "nav-desktop"
-      "front-main"
+      "main"
       "footer";
   }
 }

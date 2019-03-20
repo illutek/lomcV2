@@ -1,10 +1,21 @@
 // //////////////////////////////
-// @@ PAGE-MAIN
+// @@ PAGE-MAIN-CONTENT
 // //////////////////////////////
 
-.page-main {
+.main {
+  
+  &__page-wrap {
+    
+    @include mq(desktop) {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas:
+        "main-content sidebar";
+    }
+  }
 
-  &__wrap {
-    margin: 3rem 0;
+  &__content {
+
+    grid-area: main-content;
   }
 }
