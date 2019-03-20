@@ -1,3 +1,14 @@
 // //////////////////////////////
-// @@ CONTENT
+// @@ CONTENT node.html.twig
 // //////////////////////////////
+
+.node {
+
+  &__content {
+
+    @include mq(desktop) {
+      margin-right: 4rem;
+    }
+  
+  }
+}

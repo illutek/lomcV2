@@ -1,25 +1,8 @@
 // /////////////////////////////////////
-// @@ ACTIVITIES teaser and full node
+// @@ ACTIVITIES teaser node
 // /////////////////////////////////////
 
 .activities {
-  &__teaser {
-    // display: grid;
-    // grid-template-columns: 1fr;
-    // grid-template-areas:
-    //   "title"
-    //   "img"
-    //   "body"
-    //   "btn";
-
-    @include mq(tablet) {
-      display: block;
-    }
-  }
-
-  &__title {
-    grid-area: title;
-  }
 
   &__link {
     text-decoration: none;
@@ -29,11 +12,4 @@
     margin: 2rem 0;
   }
 
-  &__body {
-    grid-area: body;
-  }
-
-  &__full-node {
-    display: block;
-  }
 }
