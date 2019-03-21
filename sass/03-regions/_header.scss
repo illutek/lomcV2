@@ -88,6 +88,11 @@
     @include mq(desktop) {
       padding: 3rem;
     }
+
+    &--page {
+      color: $white;
+      background: none;
+    }
   }
 
   &__logo {

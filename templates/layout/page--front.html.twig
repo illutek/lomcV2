@@ -28,8 +28,11 @@
     <div class="header__img--big-desktop">
       {{ page.header_bigdesktop }}
     </div>
-
-     {% include directory ~ '/templates/partials/shared/identification.html.twig' %}
+    
+    <div class="header__club-identification">
+      {% include directory ~ '/templates/partials/identification.html.twig' %}
+    </div>
+    
   </header>
 
   {# nav--header #}
