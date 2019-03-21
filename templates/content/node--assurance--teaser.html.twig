@@ -1,16 +1,14 @@
 {#
 /**
  * @file
- * Theme override to display a node.
- * SCSS content/_activities.scss
  * 
+ *
  */
 #}
 {%
   set classes = [
     'node',
-    'activities',
-    'activities__teaser',
+    'assurance',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
@@ -19,22 +17,14 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-
-{% set bodytext = content.body|render|striptags %}
-
 <article{{ attributes.addClass(classes) }}>
 
-  <h3 class="activities__title">
+  <h3 class="assurance__title">
     <a class="title__link" href="{{ url }}" rel="bookmark">{{ label }}</a>
   </h3>
 
-  <div class="activities__content">
-    {# field--field-activities-imh.html.twig #}
-    {{ content.field_activities_img }}
-
-    <div{{ content_attributes.addClass('activities__body') }}>
-      {{ bodytext|length > 600 ? bodytext|slice(0, 600) ~ ' ...' : bodytext }}
-    </div>
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content.body }}
   </div>
 
   <div class="read-more read-more--right">

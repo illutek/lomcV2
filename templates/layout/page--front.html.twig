@@ -32,7 +32,7 @@
     <div class="header__club-identification">
       {% include directory ~ '/templates/partials/identification.html.twig' %}
     </div>
-    
+
   </header>
 
   {# nav--header #}
@@ -58,13 +58,13 @@
               {% include directory ~ '/templates/partials/front-page/activities.html.twig' %}
             </div>
 
-          <div class="insurance__content">
-            <h3>Verzekering</h3>
+            <div class="insurance__content">
+              {{ page.assurance }}
+            </div>
           </div>
-      </div>
   
-      {# sidebar photos #}
-      {% include directory ~ '/templates/partials/shared/sidebar.html.twig' %}
+          {# sidebar photos #}
+          {% include directory ~ '/templates/partials/shared/sidebar.html.twig' %}
 
         </div>
       </div>
