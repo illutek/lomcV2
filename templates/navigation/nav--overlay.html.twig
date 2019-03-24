@@ -12,23 +12,7 @@
   <nav class="menu-overlay__list">
 
     <ul class="menu-overlay__items">
-      <li class="menu-overlay__item">
-        <a href="{{ path('<front>') }}" class="menu-overlay__link">Home</a></li>
-      <li class="menu-overlay__item">
-        <a href="#" class="menu-overlay__link">Agenda</a>
-      </li>
-      <li class="menu-overlay__item">
-        <a href="#" class="menu-overlay__link">Contact</a>
-      </li>
-      <li class="menu-overlay__item">
-        <a href="#" class="menu-overlay__link">Linken</a>
-      </li>
-      <li class="menu-overlay__item">
-        <a href="#" class="menu-overlay__link">Foto's</a>
-      </li>
-      <li class="menu-overlay__item">
-        <a href="#" class="menu-overlay__link">Lid worden</a>
-      </li>
+      {% include directory ~ '/templates/partials/shared/menu-items.html.twig' %}
     </ul>
 
   </nav>

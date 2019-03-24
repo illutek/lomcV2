@@ -17,13 +17,11 @@
     @include mq(desktop) {
       display: none;
     }
-
   }
 
   &--hidden {
     display: none;
   }
-
 
   // Desktop Navigation
   &--header {
@@ -35,7 +33,6 @@
     @include mq(desktop) {
       display: block;
     }
-
   }
 
   &--footer {
@@ -46,25 +43,24 @@
     }
   }
 
-
   &__items {
     list-style: none;
     padding-left: 0;
     display: flex;
 
+    > li {
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+
     &--footer {
       justify-content: center;
     }
   }
+}
 
-  &__item {
-    &:not(:last-child) {
-      margin-right: 1.5rem;
-    }
-  }
-
-  &__link {
-    text-decoration: none;
-    color: $white;
-  }
+.link {
+  text-decoration: none;
+  color: $white;
 }
