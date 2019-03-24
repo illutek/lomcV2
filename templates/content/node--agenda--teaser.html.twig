@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * 
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'agenda__teaser',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+{% set bodytext = content.body|render|striptags %}
+
+{{ attach_library('classy/node') }}
+<a href="{{ url }}" {{ attributes.addClass(classes) }}>
+
+  <h3{{ title_attributes }}>
+    {{ label }}
+  </h3>
+ 
+ 
+  <div class="agenda__date">
+    {# gives the current date #}
+      {# 
+      <span class="date__day">{{ field_agenda_date|date("d") }}</span>
+      <span class="date__month">{{ item.content.field_agenda_date|date("F") }}</span>
+      <span class="date__year">{{ item.content.field_agenda_date|date("Y") }}</span> 
+      #}
+
+    {{ content.field_agenda_date }}  
+  </div>
+
+  <div{{ content_attributes.addClass('agenda__body') }}>
+    {{ bodytext|length > 300 ? bodytext|slice(0, 300) ~ ' ...' : bodytext }}
+  </div>
+
+  <div class="read-more read-more--right">
+    <div class="btn btn--red" href="{{ url }}">Lees meer</div>
+  </div>
+
+</a>

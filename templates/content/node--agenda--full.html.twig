@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * 
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'agenda__full',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+
+{{ attach_library('classy/node') }}
+<article href="{{ url }}" {{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if not page %}
+    <h3{{ title_attributes }}>
+      {{ label }}
+    </h3>
+  {% endif %}
+  {{ title_suffix }}
+ 
+ 
+  <div class="agenda__date">
+    {{ content.field_agenda_date }}  
+  </div>
+
+  <div{{ content_attributes.addClass('agenda__body') }}>
+    {% if content.field_agenda_img|render is not empty %}
+      <div class="body__img">{{ content.field_agenda_img }}</div>
+    {% endif %}
+    <div class="body__info">{{ content.body }}</div>
+  </div>
+
+</article>
