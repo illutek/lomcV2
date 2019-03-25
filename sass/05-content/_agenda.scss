@@ -81,3 +81,31 @@
   &__year {
   }
 }
+
+.agenda {
+
+  &__full {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    grid-template-areas:
+      "header"
+      "date"
+      "body";
+  }
+}
+
+.body {
+
+  &__img {
+    margin-bottom: 2rem;
+
+    @include mq(tablet) {
+      max-width: 45%;
+      float: left;
+      margin-right: 2rem;
+    }
+  }
+
+  &__info {}
+}
