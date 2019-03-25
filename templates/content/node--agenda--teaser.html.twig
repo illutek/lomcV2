@@ -10,6 +10,8 @@
   set classes = [
     'node',
     'agenda__teaser',
+    'panel',
+    'panel--red',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
@@ -40,7 +42,7 @@
   </div>
 
   <div{{ content_attributes.addClass('agenda__body') }}>
-    {{ bodytext|length > 300 ? bodytext|slice(0, 300) ~ ' ...' : bodytext }}
+    {{ bodytext|length > 200 ? bodytext|slice(0, 200) ~ ' ...' : bodytext }}
   </div>
 
   <div class="read-more read-more--right">

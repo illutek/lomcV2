@@ -1,7 +1,7 @@
 // /////////////////////////////////////
 // @@ AGENDA teaser and full node
 // /////////////////////////////////////
-
+// *TODO the layout things border, padding,...... to component panel and panel--red
 .agenda {  
   &__teaser {
     grid-area: agenda;
@@ -14,14 +14,6 @@
       "date"
       "body"
       "btn";
-
-    border: solid 2px $red;
-    padding: 2rem;
-    text-decoration: none;
-    color: $clr-text;
-    transition: all 0.3s;
-   
-    @include hover();
 
     @include mq(desktop) {
       grid-template-columns: minmax(13rem, 14rem) 4fr;
@@ -64,6 +56,31 @@
 }
 
 
+// views-view--agenda_page.html.twig
+.grid-agenda {
+
+  &__page {
+    margin-bottom: 4rem;
+
+    & > div {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    @include mq(desktop) {
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2rem;
+
+    }
+
+  }
+}
+
+// *TODO 
+
 .date {
   &__day {
     @include mq(desktop) {
@@ -82,6 +99,8 @@
   }
 }
 
+
+// full node agenda node--agenda--full.html.twig
 .agenda {
 
   &__full {
