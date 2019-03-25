@@ -5,18 +5,13 @@
 .sidebar {
   grid-area: sidebar;
 
-  @include mq(desktop) {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 4rem;
-  }
-
   &__cta {
-    display: flex;
+    @include mq(desktop) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__photos {
-    overflow: hidden;
     display: none;
 
     @include mq(desktop) {
