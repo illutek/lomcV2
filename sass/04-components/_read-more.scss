@@ -4,6 +4,7 @@
 
 .read-more {
   grid-area: btn;
+  align-self: end;
 
   &--right {
     justify-self: end;

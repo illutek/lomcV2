@@ -5,6 +5,7 @@
 .agenda {  
   &__teaser {
     grid-area: agenda;
+    height: 100%;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -21,7 +22,7 @@
       grid-template-areas:
         "date header"
         "date body"
-        ". btn";
+        "date btn";
     }
   }
 
@@ -35,7 +36,7 @@
     background: $metallic-seaweed;
     color: $white;
     padding: 1rem 1.5rem;
-    justify-self: start;
+    @include box-shadow();
 
     @include mq(desktop) {
       display: flex;
@@ -64,6 +65,10 @@
 
     & > div {
       &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      @include mq(desktop) {
         margin-bottom: 2rem;
       }
     }

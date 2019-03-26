@@ -4,12 +4,16 @@
 
 .panel {
   padding: 2rem;
-  text-decoration: none;
-  color: $clr-text;
   transition: all 0.3s;
+  position: relative;
+
+   > a {
+    text-decoration: none;
+    color: $clr-text;
+  }
 
   @include hover();
-  
+
   &--red {
     border: solid 2px $red;
   }
