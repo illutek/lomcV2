@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ * 
+ * SCSS - 05-content/_board.scss 
+ *  
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'board-member',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  <h3{{ title_attributes.addClass('board-member__name') }}>
+    {{ label }}
+  </h3>
+
+  <div class="board-member__photo">
+    {{ content.field_board_member_img }}
+  </div>
+
+  <div class="board-member__email">
+    {{ content.field_board_member_email }}
+  </div>
+
+  <div{{ content_attributes.addClass('board-member__info') }}>
+    {{ content.body }}
+  </div>
+
+</article>

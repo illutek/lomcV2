@@ -1,0 +1,33 @@
+// //////////////////////////////
+// @@ BOARD MEMBERS
+// //////////////////////////////
+
+.board {
+
+  &__view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+
+  &-member {
+    // position: relative;
+
+    &__name {
+      margin-bottom: 3rem;
+    }
+
+    &__photo {
+      width: 75%;
+      margin: 0 auto 3rem;
+    }
+
+    &__email {
+      margin-bottom: 2rem;
+    }
+
+    &__info {
+      
+    }
+  }
+}
