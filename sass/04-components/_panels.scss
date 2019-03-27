@@ -1,7 +1,7 @@
 // /////////////////////////
 // @@ PANELS
 // ////////////////////////
-
+// ! the hover effect only on panel--red
 .panel {
   padding: 2rem;
   transition: all 0.3s;
@@ -12,10 +12,9 @@
     color: $clr-text;
   }
 
-  @include hover();
-
   &--red {
     border: solid 2px $red;
+    @include hover();
   }
 
   &--blue {
