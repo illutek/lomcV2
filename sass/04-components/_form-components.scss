@@ -1,0 +1,41 @@
+// //////////////////////////////
+// @@ (WEB)FORM COMPONENTS
+// //////////////////////////////
+
+// !this is not it, would like to use own class names
+label {  
+  display: inline-block;
+  margin-bottom: 1rem;
+  
+}
+
+.form-text, .form-number, .form-email, .form-select {
+  padding: .7rem;
+  width: 100%;
+}
+
+// .form-radio {
+//   width: 30%;
+// }
+
+// .form-checkbox {
+//   width: 2rem;
+// }
+
+.form-type-radio {
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+// class on contact form textarea-wrapper
+.form-item-message {
+  margin-bottom: 3rem;
+}
+
+
+// become a member form
+.form-item-geslacht {
+  display: inline-block;
+}
+  
