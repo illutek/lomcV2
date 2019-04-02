@@ -38,3 +38,10 @@
 .u-full-width {
   width: 100%;
 }
+
+.u-mb {
+
+  &--null {
+    margin-bottom: 0!important;
+  }
+}
