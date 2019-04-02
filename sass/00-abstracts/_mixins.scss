@@ -41,13 +41,13 @@ $breakpoints: (
   box-shadow: $vo $ho $blur $spread $color;
 }
 
-@mixin btn($clr, $bg) {
+@mixin btn($clr, $bg, $border: none) {
   color: $clr;
   background: $bg;
   padding: 1rem 2rem;
   text-decoration: none;
   cursor: pointer;
-  border: none;
+  border: $border;
   transition: all 0.3s;
   display: inline-block;
 }

@@ -22,6 +22,11 @@
     @include btn($btn-green...);
   }
 
+  &--green-border {
+    @include btn($btn-green..., $border: 1px solid $white);
+    
+  }
+
   &--red {
     // mixin btn bundled with a list on _variables.scss
     @include btn($btn-red...);
