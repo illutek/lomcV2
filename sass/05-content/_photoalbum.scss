@@ -5,6 +5,7 @@
 .photoalbum {
   $root: &;
 
+  // teaser node and view
   &__view {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
@@ -12,54 +13,60 @@
     margin-bottom: 3rem;
   }
 
-  &__row {
-  }
+  &__row {}
 
   &__node {
     &:hover {
       #{$root}__title {
-        opacity: 1;
+        
       }
     }
   }
 
-  &__title {
-    opacity: 1;
-    text-align: center;
-
-    @include mq(desktop) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.6);
-      padding: 2rem;
-      transition: all 0.4s;
-      opacity: .3;
-    }
-  }
+  &__title {}
 
   &__heading {
     font: {
       size: calc(#{$ff-size} + .2rem); 
     }
-    @include mq(desktop) {
-      margin-bottom: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+    margin-bottom: 0;
+    color: $blue-green;
+    
   }
 
   &__img {
-    display: block;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    
+  }
+
+  // full-node - field--node--field-photoalbum-img.html.twig
+
+  &__field {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    grid-gap: 2rem;
+    grid-auto-rows: 25rem 17rem;
+    grid-auto-flow: dense;
+
+    margin-bottom: 3rem;
+    
+  }
+
+  &__field-item {
+    img {
+      object-fit: cover;
+    }
 
     @include mq(desktop) {
-      margin-bottom: 0;
+      &:first-child {
+        grid-area: 1 / 1 / span 2 / span 2;
+      }
+
+      &:nth-child(3n) {
+        grid-column: span 2;
+      }
+
     }
+    
   }
 }
