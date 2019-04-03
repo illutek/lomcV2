@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ *
+ *  * SCSS - _photoalbum.scss
+ *
+ *
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+{% for row in rows %}
+  {%
+    set row_classes = [
+      'photoalbum__row',
+      'panel',
+      'panel--red',
+      default_row_class ? 'views-row',
+    ]
+  %}
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
+  </div>
+{% endfor %}
