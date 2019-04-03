@@ -63,4 +63,14 @@
 .link {
   text-decoration: none;
   color: $white;
+  transition: all .4s;
+
+  &:hover {
+    color: $black;
+  }
+
+}
+
+.is-active {
+  color: $black;
 }

@@ -15,6 +15,7 @@ regions:
   header_mobile: 'Header mobile'
   header_desktop: 'Header Desktop'
   header_bigdesktop: 'Header Big Desktop'
+  header_menu: 'Header menu'
   agenda: Agenda
   aboutus: 'about us'
   activities: Activities
