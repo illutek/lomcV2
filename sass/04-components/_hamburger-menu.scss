@@ -29,7 +29,7 @@
       height: 1px;
       background-color: $white;
       display: inline-block;
-      transition: all 0.3s;
+      transition: all $trans-speed;
     }
 
     &::before,
@@ -58,7 +58,7 @@
       height: 1px;
       background-color: $white;
       display: inline-block;
-      transition: all 0.3s;
+      transition: all $trans-speed;
     }
 
     &::before,
