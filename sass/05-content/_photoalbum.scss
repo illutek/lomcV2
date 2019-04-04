@@ -53,6 +53,13 @@
   }
 
   &__field-item {
+    transition: all $trans-speed;
+
+    &:hover {
+      filter: brightness(50%);
+      transform: scale(1.01);
+    }
+
     img {
       object-fit: cover;
     }
