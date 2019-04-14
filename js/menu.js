@@ -10,6 +10,7 @@
   const closeBtn = document.querySelector('.close__button');
   const menuOverlay = document.querySelector('.menu-overlay');
   const navTopHidden = document.querySelector('.nav--top');
+  const openmenu = document.querySelector('.menu-overlay');
 
   // console.log(closeBtn);
 
@@ -30,5 +31,6 @@
   openBtn.addEventListener('click', openMenu);
 
   closeBtn.addEventListener('click', closeMenu);
+  openmenu.addEventListener('click', () => setTimeout(closeMenu, 1000));
 
 })();
