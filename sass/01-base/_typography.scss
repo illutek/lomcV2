@@ -20,6 +20,11 @@ h1 {
   font-size: 4vw;  //! not rem but vw
   line-height: 100%;
   text-transform: uppercase;
+  
+  @include mq(desktop) {
+    font-size: 3vw; 
+  }
+  
 }
 
 h2 {
