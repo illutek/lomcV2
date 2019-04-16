@@ -1,0 +1,11 @@
+// /////////////////////////
+// @@ CTA 
+// ////////////////////////
+
+.cta {
+  grid-area: cta;
+  
+  @include mq(desktop) {
+    margin-bottom: 4rem;
+  }
+}

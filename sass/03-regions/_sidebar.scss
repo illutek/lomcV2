@@ -5,13 +5,7 @@
 .sidebar {
   grid-area: sidebar;
 
-  &__cta {
-    @include mq(desktop) {
-      margin-bottom: 4rem;
-    }
-  }
-
-  &__photos {
+  @include e(photos) {
     display: none;
 
     @include mq(desktop) {
@@ -20,11 +14,10 @@
       grid-gap: 1.5rem;
       justify-content: space-between;
     }
-
   }
 
   // node--header-images--teaser.html.twig
-  &__images-block {
+  @include e(images-block) {
     margin-bottom: 2rem;
   }
 }
