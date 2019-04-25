@@ -1,11 +1,12 @@
 // //////////////////////////////
 // @@ NAVIGATION
 // //////////////////////////////
-
+// BEM elements and modifiers to mixin
 .nav {
   color: $white;
 
-  &--top {
+  // &--top {}
+  @include m(top) {
     background: $red;
     padding: 1rem;
     position: fixed;
@@ -19,15 +20,15 @@
     }
   }
 
-  &--hidden {
+  @include m(hidden) {
     display: none;
   }
 
   // Desktop Navigation
-  &--header {
+  @include m(header) {
     display: none;
     background: $red;
-    padding: 1rem 0;
+    padding: 2rem 0;
     grid-area: nav-desktop;
 
     @include mq(desktop) {
@@ -35,7 +36,7 @@
     }
   }
 
-  &--footer {
+  @include m(footer) {
     display: none;
 
     @include mq(desktop) {
@@ -43,19 +44,19 @@
     }
   }
 
-  &__items {
+  @include e(items) {
     list-style: none;
     padding-left: 0;
     display: flex;
 
-    > li {
-      &:not(:last-child) {
-        margin-right: 1.5rem;
-      }
-    }
-
-    &--footer {
+    @include m(footer) {
       justify-content: center;
+    }
+  }
+
+  @include e(item) {
+    &:not(:last-child) {
+      margin-right: 3rem;
     }
   }
 }
@@ -68,7 +69,6 @@
   &:hover {
     color: $black;
   }
-
 }
 
 .is-active {

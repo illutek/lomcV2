@@ -12,23 +12,24 @@
 
   grid-area: footer;
 
-  &__top {
+  @include e(top) {
     margin-bottom: 2rem;
+    text-align: center;
   }
 
-  &__bottom {
-
+  @include e(bottom) {
     &-wrap {
       display: flex;
       align-items: flex-end;
     }
   }
 
-  &__logo {
-    padding-right: 3rem;
+  @include e(logo) {
+     padding-right: 3rem;
   }
 
-  &__copy {
+  @include e(copy) {
     font-size: 1rem;
   }
+ 
 }

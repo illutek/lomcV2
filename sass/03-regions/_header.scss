@@ -12,11 +12,17 @@
   grid-gap: 1rem;
 
   @include mq(tablet) {
-    grid-template-columns: minmax(2rem, 1fr) minmax(49vw, 69vw) minmax(2rem, 1fr);
+    grid-template-columns: minmax(2rem, 1fr) minmax(49vw, 69vw) minmax(
+        2rem,
+        1fr
+      );
   }
 
   @include mq(desktop) {
-    grid-template-columns: minmax(2rem, 1fr) minmax(45vw, 65vw) minmax(2rem, 1fr);
+    grid-template-columns: minmax(2rem, 1fr) minmax(45vw, 65vw) minmax(
+        2rem,
+        1fr
+      );
   }
 
   @include mq(desktop) {
@@ -25,16 +31,17 @@
 
   grid-area: header;
 
-
   // node--header-images--full.html.twig
   // field--field-header-img.html.twig
   // image.html.twig
-  &__node, &__field, &__img-field {
+
+  &__node,
+  &__field,
+  &__img-field {
     height: 100%;
   }
 
-
-  &__img {
+  @include e(img) {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     z-index: 1;
@@ -44,7 +51,7 @@
       display: none;
     }
 
-    &--desktop {
+    @include m(desktop) {
       display: none;
 
       @include mq(tablet) {
@@ -59,7 +66,7 @@
       }
     }
 
-    &--big-desktop {
+    @include m(big-desktop) {
       display: none;
 
       @include mq(big-desktop) {
@@ -71,7 +78,7 @@
     }
   }
 
-  &__club-identification {
+  @include e(club-identification) {
     z-index: 3;
     background: rgba($white, 0.5);
     padding: 1rem;
@@ -89,16 +96,16 @@
       padding: 3rem;
     }
 
-    &--page {
+    @include m(page) {
       color: $white;
       background: none;
     }
   }
 
-  &__logo {
+  @include e(logo) {
   }
 
-  &__title {
+  @include e(title) {
     margin-left: 2rem;
     text: {
       align: center;
@@ -107,19 +114,24 @@
 }
 
 // views-view--header_images_desktop.html.twig
-.grid-header__img--desktop {
-  @include mq(tablet) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 50%);
-  }
-}
 
+.grid-header {
+  @include e(img) {
+    
+    @include m(desktop) {
+      @include mq(tablet) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 50%);
+      }
+    }
 
-.grid-header__img--big-desktop {
-  @include mq(tablet) {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 50%);
+    @include m(big-desktop) {
+      @include mq(tablet) {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 50%);
+      }
+    }
   }
 }

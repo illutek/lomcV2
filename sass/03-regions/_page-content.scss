@@ -3,20 +3,16 @@
 // //////////////////////////////
 
 .main {
-  
-  &__page-wrap {
-    
+  @include e(page-wrap) {
     @include mq(desktop) {
       display: grid;
       grid-template-columns: 3fr 1fr;
       grid-gap: 4rem;
-      grid-template-areas:
-        "main-content sidebar";
+      grid-template-areas: "main-content sidebar";
     }
   }
 
-  &__content {
-
+  @include e(content) {
     grid-area: main-content;
   }
 }

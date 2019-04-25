@@ -3,7 +3,8 @@
 // ////////////////////////
 
 .grid {
-  &__container {
+  
+  @include e(container) {
     display: grid;
     grid-template-columns: minmax(1rem, 1fr) minmax(55vw, 85vw) minmax(1rem, 1fr);
     grid-template-areas: ". wrapper .";
@@ -19,10 +20,10 @@
     @include mq(big-desktop) {
       grid-template-columns: minmax(1rem, 1fr) 120rem minmax(1rem, 1fr);
     }
-
   }
 
-  &__row {
+  @include e(row) {
     grid-area: wrapper;
   }
+
 }

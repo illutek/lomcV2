@@ -6,35 +6,34 @@
   margin: 3rem 0;
   grid-area: main;
 
-  &__front-wrap {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-gap: 4rem;
-      align-items: start;
+  @include e(front-wrap) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+    align-items: start;
+    grid-template-areas:
+      "agenda"
+      "main-content"
+      "sidebar"
+      "sub-content";
+
+    @include mq(desktop) {
+      grid-template-columns: 3fr 1fr;
       grid-template-areas:
-        "agenda"
-        "main-content"
-        "sidebar"
-        "sub-content";
-
-      @include mq(desktop) {
-        grid-template-columns: 3fr 1fr;
-        grid-template-areas:
-          "agenda sidebar"
-          "main-content sidebar"
-          "sub-content sidebar";
-      }
+        "agenda sidebar"
+        "main-content sidebar"
+        "sub-content sidebar";
     }
+  }
 
-  &__front-content {
+  @include e(front-content) {
     grid-area: main-content;
   }
 
-  &__sub-content {
+  @include e(sub-content) {
     grid-area: sub-content;
 
     display: grid;
     grid-gap: 4rem;
   }
-
 }

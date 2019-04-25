@@ -8,76 +8,78 @@
   display: flex;
   justify-content: flex-end;
 
-  &__button {
+  @include e(button) {
     height: 4rem;
     width: 4rem;
     text-align: center;
     transition: all 1.2s;
     margin-top: -1.6rem;
     cursor: pointer;
-
   }
 
-  &__icon--open {
-    position: relative;
-    transform: translateY(2.5rem);
-    width: 2rem;
-
-    &,
-    &::before,
-    &::after {
-      height: 1px;
-      background-color: $white;
-      display: inline-block;
-      transition: all $trans-speed;
-    }
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-    }
-    &::before {
-      top: -0.6rem;
+  @include e(icon) {
+    
+    @include m(open) {
+      position: relative;
+      transform: translateY(2.5rem);
       width: 2rem;
-    }
-    &::after {
-      top: 0.6rem;
-      width: 2rem;
-    }
-  }
 
-  &__icon--close {
-    position: relative;
-    width: 0;
+      &,
+      &::before,
+      &::after {
+        height: 1px;
+        background-color: $white;
+        display: inline-block;
+        transition: all $trans-speed;
+      }
 
-    &,
-    &::before,
-    &::after {
-      height: 1px;
-      background-color: $white;
-      display: inline-block;
-      transition: all $trans-speed;
-    }
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-    }
-
-    &::before {
-      transform: rotate(135deg);
-      top: 1rem;
-      width: 2rem;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+      &::before {
+        top: -0.6rem;
+        width: 2rem;
+      }
+      &::after {
+        top: 0.6rem;
+        width: 2rem;
+      }
     }
 
-    &::after {
-      transform: rotate(-135deg);
-      top: 1rem;
-      width: 2rem;
+    @include m(close) {
+      position: relative;
+      width: 0;
+
+      &,
+      &::before,
+      &::after {
+        height: 1px;
+        background-color: $white;
+        display: inline-block;
+        transition: all $trans-speed;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+
+      &::before {
+        transform: rotate(135deg);
+        top: 1rem;
+        width: 2rem;
+      }
+
+      &::after {
+        transform: rotate(-135deg);
+        top: 1rem;
+        width: 2rem;
+      }
     }
   }
 }

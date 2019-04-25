@@ -15,41 +15,42 @@
   background: $metallic-seaweed;
   transition: all 0.9s;
 
+  display: grid;
+  grid-template-columns: 2rem 1fr 2rem;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-areas:
+    ". btn ."
+    ". list ."
+    ". cta .";
+
   @include mq(desktop) {
     display: none;
   }
-
-  display: grid;
-  grid-template-columns: 2rem 1fr 2rem;
-  grid-template-rows: 1fr 5fr;
-  grid-template-areas:
-    ". btn ."
-    ". list .";
-
-  &--visible {
-	opacity: 1;
-	right: 0;
+  
+  @include m(visible) {
+    opacity: 1;
+    right: 0;
   }
 
-  &__list {
+  @include e(list) {
     grid-area: list;
     justify-self: center;
   }
 
-  &__items {
+  @include e(items) {
     list-style: none;
     font-size: 3rem;
     line-height: 5rem;
   }
-
 }
 
 .close {
-  &__button {
-    width: 5rem;
+  @include e(button) {
+    width: 4rem;
+    height: 4rem;
     cursor: pointer;
+    margin-top: 1.5rem;
 
-    align-self: center;
     justify-self: end;
     grid-area: btn;
   }

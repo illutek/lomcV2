@@ -59,3 +59,16 @@ $breakpoints: (
     @include box-shadow;
   }
 }
+
+// mixin BEM
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
