@@ -12,11 +12,12 @@ const gulp = require("gulp"),
   watch = require("gulp-watch"),
   prefixer = require("gulp-autoprefixer"),
   uglify = require("gulp-uglify"),
+  del = require("del"),
   sass = require("gulp-sass"),
   sourcemaps = require("gulp-sourcemaps"),
   cleancss = require("gulp-clean-css"),
-  rimraf = require("rimraf"),
   imagemin = require("gulp-imagemin"),
+  runSequence = require('run-sequence'),
   babel = require("gulp-babel");
 
 /**
@@ -63,8 +64,8 @@ const path = {
  * clean task
  *
  */
-gulp.task("clean", function(cb) {
-  rimraf(path.clean, cb);
+gulp.task("clean", function() {
+  return del(['dist']);
 });
 
 /**
@@ -134,7 +135,7 @@ gulp.task("png:dist", function() {
   gulp.src(path.src.png).pipe(gulp.dest(path.dist.png));
 });
 
-gulp.task("deploy", [
+gulp.task("dist", [
   "twig:dist",
   "php:dist",
   "yml:dist",
@@ -145,6 +146,22 @@ gulp.task("deploy", [
   "img:dist",
   "png:dist"
 ]);
+
+/**
+ * deploy
+ * 
+ * Gulp 4
+ * gulp.task('deploy', gulp.series('clean', 'dist'));
+ * 
+ * For now with gulp 3 used run-sequence
+ */
+// 
+
+gulp.task('deploy', function(done) {
+  runSequence('clean', 'dist', function() {
+    done();
+  });
+});
 
 /**
  * sass task
