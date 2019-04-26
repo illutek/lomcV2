@@ -6,17 +6,19 @@
 #}
 
 <footer class="footer">
-  <div class="footer__top">
-    <div class="nav--footer">
-      {% include directory ~ '/templates/navigation/nav--header.html.twig' %}
-    </div>
-  </div>
+  <div class="grid__container">
+    <div class="grid__row">
 
-  <div class="footer__bottom">
-    <div class="grid__container">
-      <div class="grid__row">
+    <div class="footer__inner">
+    
+    <div class="footer__right">
+        <div class="nav--footer">
+          {{ page.footer_menu }}
+        </div>
+      </div>
 
-        <div class="footer__bottom-wrap">
+      <div class="footer__left">
+        <div class="footer__left-wrap">
           <div class="footer__logo">
             <img src="{{ base_path ~ directory }}/images/logo.jpg" alt="LOMC Logo" />
           </div>
@@ -26,9 +28,12 @@
             <a href="{{ base_path}}lomc-clubreglement" class="link">Clubregelement</a>
             | <a href="{{ base_path}}privacy" class="link">Privacy</a>
           </div>
-          
         </div>
+
       </div>
+    
+    </div>    
+
     </div>
   </div>
 </footer>

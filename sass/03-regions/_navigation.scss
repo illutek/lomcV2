@@ -49,9 +49,6 @@
     padding-left: 0;
     display: flex;
 
-    @include m(footer) {
-      justify-content: center;
-    }
   }
 
   @include e(item) {

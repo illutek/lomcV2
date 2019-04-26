@@ -12,24 +12,37 @@
 
   grid-area: footer;
 
-  @include e(top) {
-    margin-bottom: 2rem;
-    text-align: center;
+  @include mq(desktop) {
+    @include e(inner) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "left right";
+    }
   }
 
-  @include e(bottom) {
+  @include e(right) {
+    margin-bottom: 2rem;
+
+    grid-area: right;
+    justify-self: center;
+  }
+
+  @include e(left) {
+    align-self: end;
     &-wrap {
       display: flex;
       align-items: flex-end;
+
+      grid-area: left;
     }
   }
 
   @include e(logo) {
-     padding-right: 3rem;
+    padding-right: 3rem;
+    max-width: 20rem;
   }
 
   @include e(copy) {
     font-size: 1rem;
   }
- 
 }

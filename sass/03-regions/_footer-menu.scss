@@ -1,0 +1,24 @@
+// /////////////////////////
+// @@ FOOTER MENU
+// ////////////////////////
+
+.footer-nav {
+  @include e(items) {
+  }
+
+  @include e(item) {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @include e(link) {
+    text-decoration: none;
+    color: $yellow;
+    transition: all $trans-speed;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
