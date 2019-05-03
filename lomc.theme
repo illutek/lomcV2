@@ -11,3 +11,12 @@
    $variables['site_slogan'] = $config->get('slogan');
 
  }
+
+ function lomc_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__'.$content_type;
+  }
+}
+
+

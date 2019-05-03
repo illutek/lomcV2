@@ -3,6 +3,7 @@
 // //////////////////////////////
 
 .main {
+
   @include e(page-wrap) {
     @include mq(desktop) {
       display: grid;
@@ -10,6 +11,10 @@
       grid-gap: 4rem;
       grid-template-areas: "main-content sidebar";
     }
+  }
+
+  @include e(page-no-sidebar) {
+    width: 100%;
   }
 
   @include e(content) {

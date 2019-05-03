@@ -1,0 +1,51 @@
+
+{#
+/**
+ *
+ * page--photo-album.html.twig
+ * No sidebar
+*/
+#}
+
+  {# Navigation top for mobile view #}
+  {% include directory ~ '/templates/navigation/nav--top.html.twig' %}
+
+  {# menu overlay only for mobile view #}
+  {% include directory ~ '/templates/navigation/nav--overlay.html.twig' %}
+
+  <div class="page">
+
+    {# header #}
+    <header class="header">
+      <div class="header__club-identification header__club-identification--page">
+        {% include directory ~ '/templates/partials/identification.html.twig' %}
+      </div>
+    </header>
+
+    <div class="nav--header">
+      {% include directory ~ '/templates/navigation/nav--header.html.twig' %}
+    </div>
+
+    <main class="main">
+      <div class="grid__container">
+        <div class="grid__row">
+
+          <div class="main__page-no-sidebar">        
+
+            <div class="main__content">
+              {{ page.content }}
+            </div>{# /.layout-content #}
+
+          </div>
+          {# end main-wrap #}
+        </div>
+          {# end grid__row #}
+      </div>
+        {# end grid__container #}
+    </main>
+
+  {% include directory ~ '/templates/partials/shared/footer.html.twig' %}
+</div>
+{# end of page #}
+
+ 
