@@ -17,12 +17,11 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas: "left right";
+      align-items: center;
     }
   }
 
   @include e(right) {
-    margin-bottom: 2rem;
-
     grid-area: right;
     justify-self: center;
   }
