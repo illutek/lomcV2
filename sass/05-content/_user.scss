@@ -1,0 +1,16 @@
+// /////////////////////////
+// @@ CONTENT DIR
+// ////////////////////////
+
+.profile {
+
+  @include e(wrap) {
+    display: flex;
+  }
+  @include e(picture) {
+    max-width: 10rem;
+  }
+  @include e(content) {
+    padding: 1rem 3rem;
+  }
+}
