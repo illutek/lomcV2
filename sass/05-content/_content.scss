@@ -3,12 +3,5 @@
 // //////////////////////////////
 
 .node {
-
-  &__content {
-
-    @include mq(desktop) {
-      margin-right: 4rem;
-    }
-  
-  }
+  &__content {}
 }
