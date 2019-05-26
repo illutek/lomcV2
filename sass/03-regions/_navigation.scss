@@ -61,7 +61,7 @@
 .link {
   text-decoration: none;
   color: $white;
-  transition: all $trans-speed;
+  transition: color $trans-speed;
 
   &:hover {
     color: $black;

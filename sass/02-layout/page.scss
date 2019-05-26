@@ -9,7 +9,8 @@
   grid-template-areas:
     "header"
     "main"
-    "footer";
+    "footer"
+    "footer-bottom";
 
   @include mq(tablet) {
     grid-template-columns: 1fr;
@@ -18,6 +19,7 @@
       "header"
       "nav-desktop"
       "main"
-      "footer";
+      "footer"
+      "footer-bottom";
   }
 }

@@ -12,30 +12,38 @@
 
       <div class="footer__inner">
       
-        <div class="footer__right">
+      {# footer__one #}
+        <div class="footer__one">
           <div class="nav--footer">
             {{ page.footer_menu }}
           </div>
         </div>
+      {# footer__one end #}
 
-        <div class="footer__left">
-
-          <div class="footer__left-wrap">
-
-            <div class="footer__logo">
-              <img src="{{ base_path ~ directory }}/images/logo.jpg" alt="LOMC Logo" />
-            </div>
-
-            <div class="footer__copy">
-              Copyright {{ "now"|date("Y") }} | LOMC | 
-              <a href="{{ base_path}}lomc-clubreglement" class="link">Clubregelement</a>
-              | <a href="{{ base_path}}privacy" class="link">Privacy</a>
-            </div>
-
-          </div>
-          {# end footer__left-wrap #}
+      {# footer__two #}
+        <div class="footer__two">
+          <blockquote class="footer__quote">De belangrijkste doelstelling van de LOMC vzw is de belangen van haar 200-tal leden behartigen.</blockquote>
         </div>
-        {# end footer__left #}
+
+      {# footer__two end #}
+
+      {# footer__three #}
+        <div class="footer__three">
+          <div class="footer__member-of">
+            <p>LOMC is lid van:</p>
+            <img src="{{ base_path ~ directory }}/images/bfovfbva-logo.png" alt="BFOV-FBVA logo" />
+          </div> 
+        </div>
+      {# footer__three end #}
+          
+      {# footer__four #}
+        <div class="footer__four">
+          <div class="footer__logo">
+            <img src="{{ base_path ~ directory }}/images/logo.jpg" alt="LOMC logo" />
+          </div>
+        </div>
+        {# footer__four end #}
+
       </div>    
       {# end footer__inner #}
     </div>
@@ -43,3 +51,15 @@
   </div>
   {# end grid__container #}
 </footer>
+
+<footer class="footer__bottom">
+  <div class="grid__container">
+    <div class="grid__row">
+      <div class="footer__copy">
+        Copyright {{ "now"|date("Y") }} | LOMC | 
+        <a href="{{ base_path}}lomc-clubreglement" class="link">Clubregelement</a>
+        | <a href="{{ base_path}}privacy" class="link">Privacy</a>
+      </div>
+    </div>
+  </div>
+</div>
