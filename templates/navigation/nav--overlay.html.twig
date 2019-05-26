@@ -9,6 +9,7 @@
   <div class="close__button">
     <span class="hamburger__icon--close">&nbsp;</span>
   </div>
+
   <nav class="menu-overlay__list">
     <ul class="menu-overlay__items">
     {# TODO Move to Drupal menu #}
@@ -17,5 +18,11 @@
   </nav>
 
   {% include directory ~ '/templates/partials/shared/cta.html.twig' %}
+
+  <div class="menu-overlay__footer">
+    <a href="https://www.facebook.com/Limburgse-Oude-Motoren-Club-794359897357240/">
+      <img src="{{ base_path ~ directory }}/images/facebook-32.png" alt="Facebook icon" />
+    </a>
+  </div>
 
 </div>
