@@ -1,0 +1,21 @@
+// /////////////////////////
+// @@ INFO GET MEMBER 
+// ////////////////////////
+
+.info-get-member {
+
+  @include e(img) {
+    max-width: 25rem;
+    height: auto;
+    margin-right: 2rem;
+    display:  none;
+
+    @include mq(desktop) {
+      display: block;
+      float: left;
+    }
+
+  }
+
+  @include e(content) {}
+}
