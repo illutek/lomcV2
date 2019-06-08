@@ -1,0 +1,12 @@
+// /////////////////////////
+// @@ CLEARFIX 
+// ////////////////////////
+
+.agenda-body {
+
+  @include e(clearfix) {
+    &::after {
+      clear: none;
+    }
+  }
+}

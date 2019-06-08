@@ -32,13 +32,29 @@
  
   <div class="agenda__date">
     {{ content.field_agenda_date }}  
+    {# {{ content.field_agenda_date.value | date("d") }}   #}
+    {# {{ content.field_agenda_date.date|format_date('custom', 'd') }}  #}
+    {# {{ content.field_agenda_date.date|format_date('day') }}  #}
+    {# {{ content.field_agenda_date.value|date('U')|format_date('day') }}  #}
   </div>
 
   <div{{ content_attributes.addClass('agenda__body') }}>
     {% if content.field_agenda_img|render is not empty %}
       <div class="body__img">{{ content.field_agenda_img }}</div>
     {% endif %}
-    <div class="body__info">{{ content.body }}</div>
+
+    <div class="body__info">
+      {{ content.body }}
+
+      {% if content.field_bijlage|render is not empty %}
+        <div class="body__annex">
+          <div class="body__annex-label">{{ "Bijlage:"|t }}</div>
+            {{ content.field_bijlage }}
+        </div>
+      {% endif %}
+
+    </div>
+
   </div>
 
 </article>
