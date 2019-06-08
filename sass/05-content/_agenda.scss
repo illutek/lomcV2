@@ -1,8 +1,8 @@
 // /////////////////////////////////////
 // @@ AGENDA teaser and full node
 // /////////////////////////////////////
-// *TODO the layout things border, padding,...... to component panel and panel--red
-.agenda {  
+
+.agenda {
   &__teaser {
     grid-area: agenda;
     height: 100%;
@@ -17,7 +17,7 @@
       "btn";
 
     @include mq(desktop) {
-      grid-template-columns: minmax(13rem, 14rem) 4fr;
+      grid-template-columns: minmax(15rem, 16rem) 4fr;
       grid-template-rows: repeat(3, auto);
       grid-template-areas:
         "date header"
@@ -26,13 +26,47 @@
     }
   }
 
-  &__header {
+  // class .d .m .y create at /admin/structure/types/manage/agenda/display/teaser
+  @include e(date-field) {
+    display: flex;
+
+    & .d {
+      margin-right: 0.5rem;
+    }
+
+    & .m {
+      margin-right: 0.5rem;
+      text-transform: uppercase;
+    }
+    @include mq(desktop) {
+      display: block;
+
+      & .d {
+        font: {
+          size: 6rem;
+          weight: $fw-bold;
+        }
+        margin-right: 0;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      & .m {
+        font: {
+          size: 2rem;
+        }
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @include e(header) {
     grid-area: header;
   }
 
-  &__date {
+  @include e(date) {
     grid-area: date;
-
     background: $metallic-seaweed;
     color: $white;
     padding: 1rem 1.5rem;
@@ -46,20 +80,19 @@
     }
   }
 
+  // format separate date components
+  // field--field-agenda-date.html.twig
+
   &__body {
     grid-area: body;
   }
 
-
   &__full-node {
-    
   }
 }
 
-
 // views-view--agenda_page.html.twig
 .grid-agenda {
-
   &__page {
     margin-bottom: 4rem;
 
@@ -74,41 +107,16 @@
     }
 
     @include mq(desktop) {
-
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 2rem;
-
-    }
-
-  }
-}
-
-// *TODO 
-
-.date {
-  &__day {
-    @include mq(desktop) {
-      font: {
-        size: 4rem;
-        weight: 700;
-      }
-      line-height: 4rem;
     }
   }
-
-  &__month {
-  }
-
-  &__year {
-  }
 }
-
 
 // full node agenda node--agenda--full.html.twig
 .agenda {
-
-  &__full {
+  @include e(full) {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
@@ -117,19 +125,35 @@
       "date"
       "body";
   }
+
+  @include e(body) {
+    @include mq(tablet) {
+      display: flex;
+    }
+  }
 }
 
 .body {
-
-  &__img {
+  @include e(img) {
     margin-bottom: 2rem;
 
     @include mq(tablet) {
-      max-width: 45%;
-      float: left;
+      flex: 1;
       margin-right: 2rem;
     }
   }
 
-  &__info {}
+  @include e(info) {
+    flex: 1;
+    margin-bottom: 3rem;
+  }
+
+  @include e(annex) {
+    border: 1px solid $red;
+    padding: 2rem;
+
+    &-label {
+      margin-bottom: 1rem;
+    }
+  }
 }
