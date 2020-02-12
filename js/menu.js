@@ -6,11 +6,11 @@
 (function () {
   'use strict';
 
-  const openBtn = document.querySelector('.hamburger__button');
-  const closeBtn = document.querySelector('.close__button');
-  const menuOverlay = document.querySelector('.menu-overlay');
-  const navTopHidden = document.querySelector('.nav--top');
-  const openmenu = document.querySelector('.menu-overlay');
+  var openBtn = document.querySelector('.hamburger__button');
+  var closeBtn = document.querySelector('.close__button');
+  var menuOverlay = document.querySelector('.menu-overlay');
+  var navTopHidden = document.querySelector('.nav--top');
+  var openmenu = document.querySelector('.menu-overlay');
 
   // console.log(closeBtn);
 
@@ -31,6 +31,6 @@
   openBtn.addEventListener('click', openMenu);
 
   closeBtn.addEventListener('click', closeMenu);
-  openmenu.addEventListener('click', () => setTimeout(closeMenu, 1000));
+  // openmenu.addEventListener('click', () => setTimeout(closeMenu, 1000));
 
-})();
+}());

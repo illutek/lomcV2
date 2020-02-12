@@ -1,7 +1,7 @@
 globalstyle:
   css:
     theme:
-      css/styles.css: {}
+      dist/css/styles.css: {}
 
 fonts:
   license:
@@ -13,7 +13,7 @@ fonts:
 
 javascript:
   js:
-    js/menu.js: {}
+    dist/js/all.js: {}
   dependencies:
     - core/jquery
     - core/drupal.ajax
