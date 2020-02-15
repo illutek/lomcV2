@@ -4,7 +4,7 @@
  * Load the site name and slogan out of configuration.
  */
 
- function lomc_preprocess_page(array &$variables) {
+ function lomcV2_preprocess_page(array &$variables) {
 
    $config = \Drupal::config('system.site');
    $variables['site_name'] = $config->get('name');
@@ -12,7 +12,7 @@
 
  }
 
- function lomc_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+ function lomcV2_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     $content_type = $node->bundle();
     $suggestions[] = 'page__'.$content_type;

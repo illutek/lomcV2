@@ -1,15 +1,15 @@
-name: lomc
+name: lomcV2
 type: theme
-description: 'Oude Limburgse Motoren Club'
+description: 'Oude Limburgse Motoren Club ver2 - gulp4'
 base theme: classy
 package: Custom
 core: 8.x
-version: 1.0.0
+version: 2.0.0
 
 libraries:
-  - lomc/globalstyle
-  - lomc/fonts
-  - lomc/javascript
+  - lomcV2/globalstyle
+  - lomcV2/fonts
+  - lomcV2/javascript
 
 regions:
   header_mobile: 'Header mobile'
